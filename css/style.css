@@ -61,6 +61,11 @@ input, select { vertical-align: middle; }
 }
 
 @font-face {
+  font-family: 'OpenSansLightItalic';
+  src: url(../fonts/OpenSans-LightItalic.ttf) format('truetype')
+}
+
+@font-face {
   font-family: 'PlayfairDisplay';
   src: url(../fonts/PlayfairDisplay-Regular.ttf) format('truetype')
 }
@@ -80,12 +85,13 @@ body {
     height: 100%;
     font-size: 100%;
     color: #000;
+    background-color: #fffff9;
     line-height: 1.625;
 }
 
 /*
 #ad9ca2
-#97a0b0
+
 */
 
 /* Headings */
@@ -106,18 +112,20 @@ h3 {
     font-family: 'PlayfairDisplay', serif;
     font-size: 4em;
     color: #925c79;
+    text-align: center;
 }
 
 /* General Styling */
 
-header, nav, main, footer {
+header, main, footer {
     width: 100%;
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1.5em;
     color: #432333;
-    margin-bottom: 1em;
+    width: 90%;
+    margin: 0 5% 1em;
 }
 
 img {
@@ -128,13 +136,25 @@ ul li {
     list-style-type: none;
 }
 
-/* Flexbox elements */
+.divider {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+}
 
+
+/* Flexbox elements */
 
 nav,
 nav ul,
 #philosophy,
-footer {
+.service-options,
+.service-options ul,
+#meet-kim,
+footer,
+footer ul {
     display: flex;
     display: -webkit-box;
     display: -moz-box;
@@ -154,136 +174,152 @@ header {
     margin: 2% 0 0 2%;
 }
 
-/* Menu */ 
+/* Navigation */ 
 
-nav {
-    width: 50%;
-    margin: 0 0 0 49%;
+#navigation {
+    width: 48%;
+    margin: 0 0 0 50%;
 } 
 
-nav ul {
+#navigation ul {
     width: 100%;
     flex-flow: row;
     justify-content: space-around;
     position: relative;
-    bottom: .25em; 
+    bottom: .25em;
     font-family: 'OpenSansLight', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #432333;
+    z-index: 10;
 }
 
-na ul li {
-   
+/* Menu */
+
+.menu-toggle,
+.main-menu .menu-close {
+    display: none;
+  }
+  
+.main-menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+}
+  
+.main-menu a {
+    border: 0 !important; /* Remove borders from off-canvas styling */
+    text-decoration: none;
+    color: #432333;
+  }
+  
+.main-menu a:hover,
+.main-menu a:focus {
+    background: none; /* Remove background from off-canvas styling */
+    color: #97a0b0;
 }
 
-a.menu:link {color: #000; text-decoration: none;} 
+/* a.menu:link {color: #000; text-decoration: none;} 
 a.menu:visited {color: #000;}  
 a.menu:hover {color: #000; }  
-a.menu:active {color: #000;}  
+a.menu:active {color: #000;}  */ 
 
 
 /* Main */
 
+
 main {
-    
+
+}
+ 
+#philosophy, 
+#services, 
+#meet-kim {
+    position: relative;
+    padding: 5%;
 }
 
-.succulent {
+#testimonials {
     position: relative;
     height: inherit;
     background-image: url(../images/intuitive-bookkeeper-background.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     padding-top: 52.8%;
 }
 
 .divider-1 {
-    width: 100%;
-    position: absolute;
     top: -8.5%;
-    z-index: 5;
 }
 
-.testimonial {
-    width: 30%;
+.fader {
+    width: 45%;
     position: absolute;
     top: 10%;
-    left: 10%;
+    left: 0;
 }
 
-.testimonial p, .testimonial-client {
+.fader p, .client-name {
     font-family: 'PlayfairDisplayItalic', serif;
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: #432333;
-    width: 100%;
+    width: 70%;
+    margin: 0 15%;
 }
 
-.testimonial-client {
+.client-name {
     text-align: right;
 }
 
 .divider-2 {
-    width: 100%;
-    position: absolute;
-    bottom: -27.1%;
-    z-index: 5;
+    bottom: -27%;
 }
 
 /* Philosophy Section */
 
 #philosophy {
-    position: relative;
-    background-color: #000;
     justify-content: flex-end;
+    background-color: black;
 }
 
 #philosophy div {
-    width: 40%;
-    padding: 8% 11% 8% 0;
-    
-}
-
-.header-right {
-    width: 100%;
-}
-
-#philosophy p {
-    width: 100%;
-    font-size: 1.5em;
-}
-
-.divider-3 {
-    width: 100%;
-    position: absolute;
-    bottom: -7%;
-    z-index: 5;
+    width: 50%;
+    padding: 5% 0;
 }
 
 /* Services Section */
 
+.divider-3 {
+    position: absolute;
+    left: 50%;
+    top: -12%;
+    transform: translate(-50%, 12%);
+}
+
 #services {
-    position: relative;
     justify-content: flex-start;
+    /* height: inherit;
+    background-image: url(../images/intuitive-bookkeeper-background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 52.8%; */
 }
 
 #services > div {
-    width: 45%;
-    padding: 3% 0% 8% 5%;
-}
-
-.header-left {
-    width: 100%;
-    text-align: center;
+    /* position: absolute; */
+    position: relative;
+    width: 50%;
+    top: 0;
+    left: 0;
 }
 
 .service-options {
-    display: flex;
     flex-flow: column;
 }
 
 .service-options ul {
-    display: flex;
     flex-flow: row;
     align-items: center;
 }
@@ -308,13 +344,45 @@ main {
 
 /* Meet Kim Section */
 
+#meet-kim {
+    flex-flow: row;
+}
 
+#meet-kim div {
+    flex: 1;
+}
 
+#meet-kim div h3 {
+    text-align: center;
+}
+
+.kim {
+    width: 90%;
+    margin: 10% 0;
+}
 
 /* Footer */ 
     
-footer{
+footer {
+    position: relative;
+    background-color: #97a0b0;
+    padding: 3em 0 2em;
+}
 
+.divider-footer {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -54%);
+}
+
+footer ul {
+    width: 20%;
+    margin-left: 5%;
+    font-family: "OpenSansLightItalic", sans-serif;
+    color: #fffff9;
+    flex-flow: column;
+    
 }
 
 
@@ -405,7 +473,7 @@ body {
 @media only screen and (max-width: 65em) {
     
     body {
-         font-size: 78%;
+         font-size: 80%;
     }    
 }
 
@@ -413,7 +481,7 @@ body {
 @media only screen and (max-width: 61em) {
   
     body {
-        font-size: 70%;
+        font-size: 72%;
     }      
 }
 
@@ -421,7 +489,7 @@ body {
 @media only screen and (max-width: 55em) {
   
     body {
-       font-size: 62%;
+       font-size: 65%;
     }   
 }
 
@@ -433,8 +501,165 @@ body {
 @media only screen and (max-width: 50em) {
  
     body {
-        font-size: 92%;
-    }    
+        font-size: 90%;
+    } 
+    
+    header {
+        padding-bottom: 3em;
+    }
+    
+    p {
+        width: 100%;
+        margin: 0 0 1em;
+    }
+
+/* Navigation */
+    
+    #navigation {
+        width: 50%;
+        margin: 0;
+    }
+    
+    #navigation ul {
+        display: block;
+        width: 90%;
+        margin: 5em 5% 0;
+        min-height: 100%;
+        background: transparent;
+    }
+
+/* Menu */
+    
+    .menu-toggle {
+        display: inline-block;
+        margin: 5% 5% 0 5%;
+        padding: 1% 1% 0;
+        line-height: 1em;
+        font-size: 3em;
+        color: #432333;
+        float: right;
+        text-decoration: none;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        color: #97a0b0;
+    }  
+
+    .main-menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        transition: left 0.3s ease,
+                  box-shadow 0.3s ease;
+        z-index: 15;
+        background-color: #fffff9;
+        margin: 0;
+    }   
+
+    .main-menu a {
+        display: block;
+        padding: 1em;
+        line-height: 1em;
+        font-size: 1.5em;
+        color: #432333;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        text-decoration: none;
+        color: #97a0b0;
+    }
+
+    .main-menu .menu-close {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 4em;
+        padding: .5em;
+    }
+
+    .main-menu:target {
+        left: 0%;
+        outline: none;
+        -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    }
+
+    .main-menu:target .menu-close {
+        z-index: 15;
+    }
+
+    .main-menu:target ul {
+        position: relative;
+        z-index: 12;
+    }
+
+    .main-menu:target + .backdrop {
+      position: absolute;
+      display: block;  
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 9;
+      background: rgba(0,0,0,0.5);
+      cursor: default;
+    }  
+    
+/* Philosophy Section */
+
+    #philosophy div {
+        width: 90%;
+        padding: 10% 5%;
+    }
+
+/* Services Section */
+
+#services > div {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    top: 0;
+    left: 0;
+}
+
+/* Meet Kim Section */
+
+    #meet-kim {
+        flex-flow: row;
+    }
+
+/* Footer */ 
+    
+footer {
+    position: relative;
+    background-color: #97a0b0;
+    padding: 3em 0 2em;
+}
+
+.divider-footer {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -54%);
+}
+
+footer ul {
+    width: 20%;
+    margin-left: 5%;
+    font-family: "OpenSansLightItalic", sans-serif;
+    color: #fffff9;
+    flex-flow: column;
+    
+}
+    
 }
 
 /*** Up to 720px ***/
@@ -449,7 +674,7 @@ body {
 @media only screen and (max-width: 40em) {
     
     body {
-        font-size: 89%;
+        font-size: 80%;
     }      
 }
 
@@ -457,8 +682,51 @@ body {
 @media only screen and (max-width: 35em) {
   
     body {
-        font-size: 81%;
-    }        
+        font-size: 90%;
+    }  
+
+    #logo {
+        width: 50%;
+        margin: 2% 0 0 2%;
+    }
+
+/* Navigation */
+
+    #navigation {
+        width: 70%;
+    }
+
+/* Meet Kim Section */
+
+    #meet-kim {
+        flex-flow: column;
+    }
+    
+    .kim {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+/* Footer */ 
+    
+footer {
+    position: relative;
+    padding: 3em 0 2em;
+}
+
+.divider-footer {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -54%);
+}
+
+footer ul {
+    width: 20%;
+    margin-left: 5%;
+    flex-flow: column;
+    
+}    
 }
 
 /*** Up to 480px ***/

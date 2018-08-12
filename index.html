@@ -37,50 +37,64 @@
         <img id="logo" src="images/intuitive-bookkeeper-logo.png">
   
 <!-- Navigation -->  
-        <nav>
+        <a href="#navigation" id="main-menu-toggle" class="menu-toggle">
+            <span class="none">&#9776;</span>
+        </a>
+        
+        <nav id="navigation" class="main-menu">
+            
+            <a href="#tab-navigation" id="main-menu-close" class="menu-close">
+              <span>&#215;</span>
+            </a>
+            
             <ul>
-                <li>Our Philosophy</li>
-                <li>Services</li>
-                <li>Meet Kim</li>
+                <li><a href="#">Our Philosophy</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Meet Kim</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-           
-<!-- End Navigation --> 
+        
+        <a href="#main-menu-toggle" class="backdrop" hidden></a>
+<!-- End Navigation -->
+        
     </header>     
 <!-- End Header -->   
     
 <!-- Main -->     
     <main>
         
-        <div class="succulent">
+        <div id="testimonials">
+            
             <img class="divider divider-1" src="images/intuitive-bookkeeper-divider-1.png">
             
-            <div class="testimonial">
+            <div class="fader">
                 <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voluptate."</p>
             
-                <p class="testimonial-client">- Susan B. Client</p>
+                <p class="client-name">- Susan B. Client</p>
             </div>
-               
-             <img class="divider divider-2" src="images/intuitive-bookkeeper-divider-2.png">
+            
+            <img class="divider divider-2" src="images/intuitive-bookkeeper-divider-2.png">
         </div>  
+        
         
         
         <section id="philosophy">
             
             <div>
-                <h3 class="header-right">Our Philosophy</h3>
+                <h3>Our Philosophy</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voluptate.</p>
-            </div>
-            
-            <img class="divider divider-3" src="images/intuitive-bookkeeper-divider-3.png">
+            </div> 
             
         </section>
         
         <section id="services">
             
+            <img class="divider divider-3" src="images/intuitive-bookkeeper-divider-3.png">
+            
             <div>
-                <h3 class="header-left">Services</h3>
+                <h3>Services</h3>
                 
                 <div class="service-options">
                     <ul>
@@ -108,16 +122,38 @@
                     </ul>
                 </div>
                     
+            </div> 
+       
+        </section>
+        
+        <section id="meet-kim">
+            
+            <div>
+                <img class="kim" src="images/Kim-Fodrie-intuitive-bookkeeper.png">
             </div>
             
+            <div>
+                <h3>Meet Kim</h3>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+            </div>
         </section>
         
     </main>   
 <!-- End Main --> 
+    <div class="divider">
+        <img class="divider-footer" src="images/intuitive-bookkeeper-footer-top.png">
+    </div>  
         
 <!-- Footer -->      
     <footer>
-       
+        <ul>
+            <li>Copyright 2018</li>
+            <li>The Intuitive Bookkeeper</li>
+            <li>Phone Number</li>
+            <li>Email Address</li>
+        </ul>
     </footer>  
 <!-- End Footer -->  
     
