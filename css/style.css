@@ -253,14 +253,64 @@ main {
     top: -8.5%;
 }
 
-.fader {
+.testimonial-container {
     width: 45%;
     position: absolute;
     top: 10%;
     left: 0;
 }
 
-.fader p, .client-name {
+/* Testimonial Fader */
+
+.fader {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.fader > li {
+  position: absolute;
+  opacity: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.fader > li:first-child {
+  -webkit-animation: loop 20s infinite;
+}
+
+.fader > li:nth-child(2) {
+  -webkit-animation: opsecond 20s infinite;
+}
+
+.fader > li:last-child {
+  -webkit-animation: oplast 20s infinite;
+}
+
+@-webkit-keyframes loop {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  33% { opacity: 1; } 
+  44% { opacity: 0; }
+}
+
+@-webkit-keyframes opsecond {
+  33% { opacity: 0; }
+  44% { opacity: 1; }
+  66% { opacity: 1; }
+  77% { opacity: 0; }
+}
+  
+@-webkit-keyframes oplast {
+  66% { opacity: 0; }
+  77% { opacity: 1; }
+  100% { opacity: 1; }
+  0% { opacity: 1; }
+  10% { opacity: 0; }
+}
+
+.testimonial-container p, .client-name {
     font-family: 'PlayfairDisplayItalic', serif;
     font-size: 1.75em;
     color: #432333;
@@ -291,10 +341,8 @@ main {
 /* Services Section */
 
 .divider-3 {
-    position: absolute;
-    left: 50%;
-    top: -12%;
-    transform: translate(-50%, 12%);
+    bottom: -6.5%;
+    right: 0;
 }
 
 #services {
@@ -613,6 +661,19 @@ body {
       cursor: default;
     }  
     
+/* Testimonial Section */
+    
+    .testimonial-container {
+        width: 50%;
+        left: 5%;
+    }
+    
+    .testimonial-container p, .client-name {
+        font-size: 1.5em;
+        width: 100%;
+        margin: 0;
+    }
+    
 /* Philosophy Section */
 
     #philosophy div {
@@ -622,43 +683,29 @@ body {
 
 /* Services Section */
 
-#services > div {
-    position: relative;
-    width: 90%;
-    margin: 5%;
-    top: 0;
-    left: 0;
-}
+    #services > div {
+        position: relative;
+        width: 90%;
+        margin: 5%;
+        top: 0;
+        left: 0;
+    }
 
 /* Meet Kim Section */
 
     #meet-kim {
-        flex-flow: row;
+        flex-flow: column;
     }
-
-/* Footer */ 
     
-footer {
-    position: relative;
-    background-color: #97a0b0;
-    padding: 3em 0 2em;
-}
-
-.divider-footer {
-    position: absolute;
-    left: 50%;
-    top: 54%;
-    transform: translate(-50%, -54%);
-}
-
-footer ul {
-    width: 20%;
-    margin-left: 5%;
-    font-family: "OpenSansLightItalic", sans-serif;
-    color: #fffff9;
-    flex-flow: column;
+    #meet-kim div {
+        width: 90%;
+        margin: 0 5%;
+    }
     
-}
+    .kim {
+        width: 70%;
+        margin: 0 15%;
+    }
     
 }
 
@@ -666,7 +713,7 @@ footer ul {
 @media only screen and (max-width: 45em) {
  
     body {
-        font-size: 90%;
+        font-size: 85%;
     }          
 }
 
@@ -674,15 +721,19 @@ footer ul {
 @media only screen and (max-width: 40em) {
     
     body {
-        font-size: 80%;
-    }      
+        font-size: 85%;
+    } 
+    
+    .testimonial-container p, .client-name {
+        font-size: 1.25em;
+    }
 }
 
 /*** Up to 560px ***/
 @media only screen and (max-width: 35em) {
   
     body {
-        font-size: 90%;
+        font-size: 80%;
     }  
 
     #logo {
@@ -695,61 +746,62 @@ footer ul {
     #navigation {
         width: 70%;
     }
-
-/* Meet Kim Section */
-
-    #meet-kim {
-        flex-flow: column;
-    }
     
-    .kim {
-        width: 70%;
-        margin: 0 15%;
+    .testimonial-container p, .client-name {
+        font-size: 1.2em;
     }
 
 /* Footer */ 
-    
-footer {
-    position: relative;
-    padding: 3em 0 2em;
-}
 
-.divider-footer {
-    position: absolute;
-    left: 50%;
-    top: 54%;
-    transform: translate(-50%, -54%);
-}
-
-footer ul {
-    width: 20%;
-    margin-left: 5%;
-    flex-flow: column;
-    
-}    
+    footer ul {
+        width: 50%;
+    }    
 }
 
 /*** Up to 480px ***/
 @media only screen and (max-width: 30em) {
     
     body {
-        font-size: 71%;
-    }        
+        font-size: 80%;
+    } 
+    
+    .testimonial-container p, .client-name {
+        font-size: 1em;
+    }
+    
+/* Services Section */
+
+    .service-options ul {
+        flex-flow: column;
+    }
+
+    .service-options ul li {
+        margin: 1em ;
+    }
+
+    .service-options ul li:nth-child(1) {
+        flex: 1;
+        padding: 1em 1.5em;
+    }
+
+    .service-options ul li:nth-child(2) {
+        flex: 1;
+    }      
 }
 
 /*** Up to 400px ***/
 @media only screen and (max-width: 25em) {
 
     body {
-        font-size: 66%;
-    }   
+        font-size: 75%;
+    }    
 }
 
 /*** Up to 336px ***/
 @media only screen and (max-width: 21em) {
    
     body {
-        font-size: 66%;
+        font-size: 65%;
     }  
 }
 
@@ -757,7 +809,7 @@ footer ul {
 @media only screen and (max-width: 16em) {
 
     body {
-        font-size: 50%;
+        font-size: 60%;
     }   
 }
 
