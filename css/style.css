@@ -556,7 +556,7 @@ body {
 @media only screen and (max-width: 50em) {
  
     body {
-        font-size: 90%;
+        font-size: 95%;
     } 
     
     header {
@@ -676,7 +676,7 @@ body {
     }
     
     .testimonial-container p, .client-name {
-        font-size: 1.5em;
+        font-size: 1.25em;
         width: 100%;
         margin: 0;
     }
@@ -692,12 +692,16 @@ body {
 
     #services > div {
         width: 70%;
-        top: 11%;
+        top: 5%;
+    }
+    
+    #services h3 {
+        margin-left: 25%;
     }
 
     .service-options ul li {
-        font-size: 1.15em;
-    }
+        font-size: 1.1em;
+    } 
 
 /* Meet Kim Section */
 
@@ -721,44 +725,43 @@ body {
 @media only screen and (max-width: 45em) {
  
     body {
-        font-size: 85%;
+        font-size: 95%;
     }   
     
 /* Services Section */
-
-    #services > div {
-        width: 70%;
-        top: 10%;
+    
+    .divider-3 {
+        top: -4.75%;
+    }
+    
+    #services {
+        justify-content: flex-start; 
+        background-image: url(../images/intuitive-bookkeeper-services-mobile.jpg);
+        padding-top: 93.9%;
     }
 
+    #services > div {
+        width: 88%;
+        top: 5%;
+    }
+    
     .service-options ul li {
-        font-size: 1.1em;
-    }    
+        font-size: 1.3em;
+    } 
 }
 
 /*** Up to 640px ***/
 @media only screen and (max-width: 40em) {
     
     body {
-        font-size: 80%;
+        font-size: 90%;
     } 
     
-/* Testimonial Section */    
-
-    .testimonial-container p, .client-name {
-        font-size: 1.25em;
-    }
-    
 /* Services Section */
-
-    #services > div {
-        width: 70%;
-        top: 10%;
-    }
-
+    
     .service-options ul li {
-        font-size: 1em;
-    }           
+        font-size: 1.2em;
+    } 
 }
 
 /*** Up to 560px ***/
@@ -784,11 +787,13 @@ body {
     }
     
 /* Services Section */
-
+    
     #services > div {
-        width: 90%;
-        top: 0%;
-        left: 5%;
+        top: 3%; 
+    }
+
+    .service-options ul li {
+        font-size: 1.2em;
     }   
 
 /* Footer */ 
@@ -802,12 +807,16 @@ body {
 @media only screen and (max-width: 30em) {
     
     body {
-        font-size: 70%;
+        font-size: 75%;
     } 
     
     .testimonial-container p, .client-name {
         font-size: 1.1em;
     }
+    
+    .service-options ul li {
+        font-size: 1.1em;
+    }  
 }
 
 /*** Up to 400px ***/
@@ -822,15 +831,26 @@ body {
 @media only screen and (max-width: 21em) {
    
     body {
-        font-size: 65%;
+        font-size: 60%;
     }  
+    
+/* Services Section */
+    
+    #services > div {
+        top: 0%;
+    }
+    
+    #services h3 {
+        margin-left: 30%;
+    }
+    
 }
 
 /*** Up to 256px ***/
 @media only screen and (max-width: 16em) {
 
     body {
-        font-size: 60%;
+        font-size: 50%;
     }   
 }
 
@@ -838,6 +858,6 @@ body {
 @media only screen and (max-width: 14em) {
 
     body {
-        font-size: 50%;
+        font-size: 40%;
     }    
 }
