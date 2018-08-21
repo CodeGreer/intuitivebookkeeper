@@ -136,6 +136,10 @@ ul li {
     list-style-type: none;
 }
 
+.center {
+    text-align: center;
+}
+
 .divider {
     position: absolute;
     width: 100%;
