@@ -103,9 +103,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'FontName', sans-serif;
-    font-size: 1.5em;
-    color: #000;
+    
 }
 
 h3 {
@@ -113,6 +111,12 @@ h3 {
     font-size: 4em;
     color: #925c79;
     text-align: center;
+}
+
+h4 {
+    font-family: 'PlayfairDisplay', serif;
+    font-size: 2em;
+    color: #fffff9;
 }
 
 /* General Styling */
@@ -146,6 +150,10 @@ ul li {
     margin: 0;
     padding: 0;
     z-index: 5;
+}
+
+.bold {
+    font-weight: 900;
 }
 
 
@@ -222,11 +230,6 @@ header {
     background: none; /* Remove background from off-canvas styling */
     color: #97a0b0;
 }
-
-/* a.menu:link {color: #000; text-decoration: none;} 
-a.menu:visited {color: #000;}  
-a.menu:hover {color: #000; }  
-a.menu:active {color: #000;}  */ 
 
 
 /* Main */
@@ -334,6 +337,7 @@ main {
 #philosophy {
     justify-content: flex-end;
     padding: 5%;
+    overflow-x: hidden;
 }
 
 #philosophy div {
@@ -411,10 +415,6 @@ main {
     margin: 0 2%;
 }
 
-#meet-kim div h3 {
-    text-align: center;
-}
-
 .kim {
     width: 90%;
     margin: 10% 0;
@@ -441,7 +441,55 @@ footer ul {
     font-family: "OpenSansLightItalic", sans-serif;
     color: #fffff9;
     flex-flow: column;
-    
+    justify-content: center;
+}
+
+#policy {
+    flex: 1;
+    margin-right: 5%;
+}
+
+#policy p {
+    font-family: "OpenSansLightItalic", sans-serif;
+    font-size: 1em;
+    color: #fffff9;
+}
+
+#policy a:link { color: #fffff9; text-decoration: none; }
+#policy a:hover { color: #432333; text-decoration: none; }
+#policy a:active { color: #432333; text-decoration: none; }
+#policy a:visited { color: #fffff9; text-decoration: none; }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: 85%;
+    font-family: "OpenSansLightItalic", sans-serif;
+    font-size: 1em;
+    color: #fffff9;
+    font-weight: 900;
+    text-align: right;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 90%;
+    height: 20em;
+    background-color: #fffff9;
+    color: #432333;
+    text-align: left;
+    padding: 5%;
+    border-radius: 6px;
+    border: 2px solid #97a0b0;
+    position: absolute;
+    z-index: 11;
+    bottom: 100%;
+    left: 0%;
+    overflow-y: scroll;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 
