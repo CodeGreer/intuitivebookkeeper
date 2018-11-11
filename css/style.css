@@ -88,16 +88,11 @@ html {
 body {
     min-height: 100vh;
     height: 100%;
-    font-size: 100%;
+    /* font-size: 100%; */
     color: #000;
     background-color: #fffff9;
     line-height: 1.625;
 }
-
-/*
-#ad9ca2
-
-*/
 
 /* Headings */
 
@@ -166,7 +161,7 @@ ul li {
     width: 100%;
     margin: 0;
     padding: 0;
-    /* z-index: 5; */
+    z-index: 5;
 }
 
 .bold {
@@ -231,10 +226,6 @@ footer ul,
 }
 
 /* Header */
-
-header {
-
-}
 
 #logo {
     width: 35%;
@@ -486,12 +477,14 @@ p.client-name {
 }
 
 .service-options {
-    width: 80%;
-    margin: 0 10% 5%;
+    width: 90%;
+    margin: 0 5% 5%;
     flex-flow: column;
 }
 
 .service-options ul {
+    width: 90%;
+    margin: 0 5%;
     flex-flow: row;
     align-items: center;
     font-size: 1.8vw;
@@ -574,9 +567,9 @@ footer {
 
 .divider-footer {
     position: absolute;
-    left: 50%;
-    top: 54%;
-    transform: translate(-50%, -54%);
+    top: -20%;
+    right: 0;
+    left: 0;
     z-index: 5;
 }
 
@@ -584,6 +577,7 @@ footer ul {
     width: 90%;
     margin: 4% 5% 0;
     font-family: "OpenSansLightItalic", sans-serif;
+    font-size: 1.25vw;
     color: #fffff9;
     flex-flow: column;
     justify-content: center;
@@ -671,6 +665,10 @@ footer ul {
     border: .08em solid #432333;
 }
 
+.internal-page .container p {
+    font-size: 1.6vw;
+}
+
 #get-started .container {
     border: none;
     width: 90%;
@@ -715,21 +713,28 @@ footer ul {
     color: #925c79
 }
 
+#get-started .container p {
+    font-size: 1.8vw;
+}
+
 #get-started .container ol {
     width: 80%;
     margin: 0 10% 2em;
-    font-size: 1.8vw;
-    
 }
 
 #get-started .container ol li {
     padding: .5em 0;
+    font-size: 1.8vw;
 }
 
 #get-started .container ul {
     width: 98%;
     margin: 0 0 0 2%;
 }
+
+#get-started .container ul li {
+        font-size: 1.7vw;
+    }
 
 .internal-page .container div ul li {
     list-style-type: disc;
@@ -741,6 +746,7 @@ footer ul {
     flex-flow: row;
     width: 90%;
     margin: 0 5%;
+    align-items: flex-end;
 }
 
 #add-ons .container div ul li {
@@ -809,146 +815,190 @@ footer ul {
 /**** Mobile Media Queries ****/
 
 
-/*** Up to 5200px ***/
-@media only screen and (max-width: 325em) {
-  
-    body {
-        font-size: 400%;
-    } 
-}
-
-/*** Up to 3904px ***/
-@media only screen and (max-width: 244em) {
-    
-    body {
-         font-size: 300.5%;
-    }         
-}
-
-/*** Up to 2640px ***/
-@media only screen and (max-width: 165em) {
-    
-    body {
-         font-size: 200%;
-    }   
-}
-
-/*** Up to 2000px ***/
-@media only screen and (max-width: 125em) {
-    
-    body {
-         font-size: 150.2%;
-    }     
-}
-
-/*** Up to 1840px ***/
-@media only screen and (max-width: 115em) {
- 
-    body {
-         font-size: 133.3%;
-    }        
-}
-
-/*** Up to 1520px ***/
-@media only screen and (max-width: 95em) {
- 
-    body {
-         font-size: 111.1%;
-    }        
-}
-
-/*** Up to 1360px ***/
-@media only screen and (max-width: 85em) {
-   
-body {
-    font-size: 95%;
-} 
-}
-    
-/*** Up to 1280px ***/    
-@media only screen and (max-width: 80em) {
-    
-    body {
-        font-size: 100%;
-    } 
-}
-
-/*** Up to 1200px ***/
-@media only screen and (max-width: 75em) {
-  
-    body {
-        font-size: 90%;
-    }   
-}
-
-/*** Up to 1120px ***/
-@media only screen and (max-width: 70em) {
-  
-    body {
-        font-size: 80%;  
-    }         
-}
-
-/*** Up to 1040px ***/
-@media only screen and (max-width: 65em) {
-    
-    body {
-         font-size: 80%;
-    }    
-}
-
-/*** Up to 976px ***/
-@media only screen and (max-width: 61em) {
-  
-    body {
-        font-size: 72%;
-    }      
-}
-
-/*** Up to 880px ***/
-@media only screen and (max-width: 55em) {
-  
-    body {
-       font-size: 65%;
-    }   
-}
-
-
 /************ Change Format ************/
 
 
 /*** Up to 800px ***/
 @media only screen and (max-width: 50em) {
- 
-    body {
-        font-size: 95%;
-    } 
     
-    header {
-        padding-bottom: 3em;
+/* General Styles */
+    
+    h3 {
+        font-size: 7vw;
+    }
+    
+    h4 {
+        font-size: 2vw;
+    }
+    
+    h5 {
+        font-size: 3.75vw;
+    }
+
+    h6 {
+        font-size: 3vw;
     }
     
     p {
-        width: 100%;
-        margin: 0 0 1em;
+        font-size: 2vw;
+        width: 90%;
+        margin: 0 5% 1em;
+    }
+    
+    .padding-top-800 {
+        padding-top: 5% !important;
+    }
+    
+    .border-bottom:after {
+        bottom: -2em;
     }
 
+    .border-bottom-800:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        position: absolute;
+        bottom: -3.5em;
+        border-bottom: .08em solid #432333;
+    }
+    
+/* Header */
+
+    #logo {
+        margin: 2% 0 2% 2%;
+    }
+    
+    
+/* Philosophy Section */
+
+    #philosophy {
+        padding: 12% 0 5%;
+    }
+
+    #philosophy h3,
+    #services h3 {
+        width: 90%;
+        margin: 0 5%;
+        padding: 2% 0 0;
+    }
+
+    #philosophy div {
+        width: 90%;
+        margin: 2% 5%;
+    }
+    
+/* Services Section */
+
+    #services {
+        padding: 3% 0 5%;
+    }
+
+    .service-options ul {
+        font-size: 2vw;
+    }
+
+/* Meet Kim Section */
+
+    .divider-5 {
+        top: -3.5%;
+    }
+
+    #meet-kim div {
+        margin: 4% 5% 5%;
+    }
+
+    #meet-kim h3 {
+        padding: 2% 0 2% 13%;
+    }
+
+    .kim {
+        width: 50%;
+    }
+    
+/* Footer */ 
+    
+    .divider-footer {
+        top: -10%;
+    }
+
+    footer ul {
+        font-size: 1.75vw;
+    }
+    
+    footer ul li {
+        padding: .5em 0;
+    }
+
+    #policy p {
+        font-size: 1.75vw;
+    }
+
+    .tooltip {
+        font-size: 1.75vw;
+    }
+
+/* Internal Pages */
+
+
+    .internal-page .divider-1 {
+        top: 19%;
+    }
+ 
+    #packages .container div {
+        flex: 1 0 49%;
+    }
+    
+    #packages .container .border + .border {
+       border: none;
+    }
+  
+    .internal-page .container p {
+        font-size: 2vw;
+    }
+
+    #get-started .container p {
+        font-size: 2vw;
+    }
+    
+    #get-started .container ol li {
+        font-size: 2vw;
+    }
+    
+    #get-started .container ul li {
+        font-size: 1.9vw;
+    }
+    
+    .internal-page .container div ul li {
+        font-size: 1.9vw;
+    }
+
+    #add-ons .container div ul li {
+        padding: 1.5em 1em 0 0;
+    }
+
+    
 /* Navigation */
     
     #navigation {
         width: 50%;
         margin: 0;
-    }
-    
+    } 
+
     #navigation ul {
-        display: block;
         width: 90%;
-        margin: 5em 5% 0;
-        min-height: 100%;
-        background: transparent;
+        padding: 3em 5% 0;
+        flex-flow: column;
+        justify-content: flex-end;
+        font-size: 1.4vw;
     }
 
-/* Menu */
+#navigation ul li {
+    padding: 0 2% 0 0;
+    font-size: .9em;
+    white-space: nowrap;
+    overflow: hidden;
+}
     
     .menu-toggle {
         display: inline-block;
@@ -956,7 +1006,7 @@ body {
         padding: 1% 1% 0;
         line-height: 1em;
         font-size: 3em;
-        color: #97a0b0;
+        color: #432333;
         float: right;
         text-decoration: none;
     }
@@ -966,26 +1016,39 @@ body {
         color: #97a0b0;
     }  
 
-    .main-menu {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-        overflow-y: auto;
-        overflow-x: auto;
-        transition: left 0.3s ease,
-                  box-shadow 0.3s ease;
-        z-index: 15;
-        background-color: #fffff9;
-        margin: 0;
-    }   
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+              box-shadow 0.3s ease;
+    z-index: 10;
+    background-color: #EFEFE9;
+}
+
+    .main-menu ul {
+        display: block;
+        margin-top: 5em;
+        width: 100%;
+        min-height: 100vh;
+        background: transparent;
+    }
+    
+    .main-menu ul ul {
+        display: none;
+    }
 
     .main-menu a {
         display: block;
         padding: 1em;
         line-height: 1em;
-        font-size: 1.5em;
+        font-size: 2.5vw;
         color: #432333;
+        text-decoration: none;
     }
 
     .main-menu a:hover,
@@ -999,25 +1062,25 @@ body {
         position: absolute;
         right: 0;
         top: 0;
-        font-size: 4em;
+        font-size: 3em;
         padding: .5em;
     }
 
-    .main-menu:target {
-        left: 0%;
-        outline: none;
-        -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
-        -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
-        box-shadow: 3px 0 12px rgba(0,0,0,.25);
-    }
+.main-menu:target {
+    left: 0%;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
 
     .main-menu:target .menu-close {
-        z-index: 15;
+        z-index: 12;
     }
 
     .main-menu:target ul {
         position: relative;
-        z-index: 12;
+        z-index: 11;
     }
 
     .main-menu:target + .backdrop {
@@ -1031,60 +1094,13 @@ body {
       z-index: 9;
       background: rgba(0,0,0,0.5);
       cursor: default;
-    }  
-
-    
-/* Testimonial Section */
-    
-    .testimonial-container {
-        width: 50%;
-        left: 5%;
-    }
-    
-    .testimonial-container p, .client-name {
-        font-size: 1.25em;
-        width: 100%;
-        margin: 0;
-    }
-    
-/* Philosophy Section */
-
-    #philosophy div {
-        width: 90%;
-        padding: 10% 5%;
     }
 
-/* Services Section */
+/* #navigation ul .sub-nav {
+    display: block;
+    padding: 0 0 10% 10%;
+} */
 
-    #services > div {
-        width: 70%;
-        top: 5%;
-    }
-    
-    #services h3 {
-        margin-left: 25%;
-    }
-
-    .service-options ul li {
-        font-size: 1.1em;
-    } 
-
-/* Meet Kim Section */
-
-    #meet-kim {
-        flex-flow: column;
-    }
-    
-    #meet-kim div {
-        width: 90%;
-        margin: 0 5%;
-    }
-    
-    .kim {
-        width: 70%;
-        margin: 0 15%;
-    }
-    
 }
 
 /*** Up to 720px ***/
@@ -1094,26 +1110,7 @@ body {
         font-size: 95%;
     }   
     
-/* Services Section */
-    
-    .divider-3 {
-        top: -4.75%;
-    }
-    
-    #services {
-        justify-content: flex-start; 
-        background-image: url(../images/intuitive-bookkeeper-services-mobile.jpg);
-        padding-top: 93.9%;
-    }
 
-    #services > div {
-        width: 88%;
-        top: 5%;
-    }
-    
-    .service-options ul li {
-        font-size: 1.3em;
-    } 
 }
 
 /*** Up to 640px ***/
@@ -1122,12 +1119,7 @@ body {
     body {
         font-size: 90%;
     } 
-    
-/* Services Section */
-    
-    .service-options ul li {
-        font-size: 1.2em;
-    } 
+
 }
 
 /*** Up to 560px ***/
@@ -1137,36 +1129,8 @@ body {
         font-size: 80%;
     }  
 
-    #logo {
-        width: 50%;
-        margin: 2% 0 0 2%;
-    }
 
-/* Navigation */
-
-    #navigation {
-        width: 70%;
-    }
-    
-    .testimonial-container p, .client-name {
-        font-size: 1.2em;
-    }
-    
-/* Services Section */
-    
-    #services > div {
-        top: 3%; 
-    }
-
-    .service-options ul li {
-        font-size: 1.2em;
-    }   
-
-/* Footer */ 
-
-    footer ul {
-        width: 50%;
-    }    
+  
 }
 
 /*** Up to 480px ***/
@@ -1176,13 +1140,7 @@ body {
         font-size: 75%;
     } 
     
-    .testimonial-container p, .client-name {
-        font-size: 1.1em;
-    }
-    
-    .service-options ul li {
-        font-size: 1.1em;
-    }  
+
 }
 
 /*** Up to 400px ***/
@@ -1199,16 +1157,7 @@ body {
     body {
         font-size: 60%;
     }  
-    
-/* Services Section */
-    
-    #services > div {
-        top: 0%;
-    }
-    
-    #services h3 {
-        margin-left: 30%;
-    }
+
     
 }
 
