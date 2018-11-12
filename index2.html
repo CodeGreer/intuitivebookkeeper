@@ -49,9 +49,9 @@
             </a>
             
             <ul>
-                <li><a data-scroll href="index2.html#philosophy">My Philosophy</a></li>
-                <li><a data-scroll href="index2.html#basics">Just the Basics</a></li>
-                <li class="dropdown"><a data-scroll href="index2.html#services">Services</a>
+                <li><a data-scroll href="#philosophy">My Philosophy</a></li>
+                <li><a data-scroll href="#basics">Just the Basics</a></li>
+                <li class="dropdown"><a data-scroll href="#services">Services</a>
                     <div>
                         <ul class="dropdown-content">
                             <li><a href="packages.html">Packages</a></li>
@@ -62,23 +62,21 @@
                         </ul>
                     </div>
                 </li>
-                <li><a data-scroll href="index2.html#meet-kim">Meet Kim</a></li>
+                <li><a data-scroll href="#meet-kim">Meet Kim</a></li>
                 <li><a href="#">Contact</a></li>
+                <li class="scrollTop"><a href="#"><span class="entypo-up-open"></span></a></li>
             </ul>
         </nav>
         
         <a href="#main-menu-toggle" class="backdrop" hidden></a>
 <!-- End Navigation -->
-        
     </header>     
 <!-- End Header -->   
     
 <!-- Main -->     
     <main>
-        
     <!-- Testimonials -->    
         <div id="testimonials">
-            
             <img alt="Blue section divider with a decorative mauve diamond in the center." class="divider divider-1" src="images/intuitive-bookkeeper-divider-1.png">
             
             <div class="testimonial-container">
@@ -350,6 +348,7 @@
 <!-- End Footer -->  
     
 <!-- Javascript -->  
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     
     <!-- Slide-In -->    
@@ -358,10 +357,10 @@
         AOS.init();
     </script>
     
-    <!-- SmoothScroll --> 
+    <!-- SmoothScroll -->
     <script src="js/smooth-scroll.min.js"></script>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
+        var scroll = new SmoothScroll('nav a', {
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             offset: 00,
             updateURL: false,
@@ -375,7 +374,9 @@
             });
     </script>    
 
-        
+
+
+
 <!-- End Javascript -->          
     
 </body> 

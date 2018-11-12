@@ -71,6 +71,11 @@ input, select { vertical-align: middle; }
 }
 
 @font-face {
+  font-family: 'OpenSansBold';
+  src: url(../fonts/OpenSans-Bold.ttf) format('truetype')
+}
+
+@font-face {
   font-family: 'PlayfairDisplay';
   src: url(../fonts/PlayfairDisplay-Regular.ttf) format('truetype')
 }
@@ -159,6 +164,8 @@ ul li {
 .divider {
     position: absolute;
     width: 100%;
+    left: 0;
+    right: 0;
     margin: 0;
     padding: 0;
     z-index: 5;
@@ -227,9 +234,26 @@ footer ul,
 
 /* Header */
 
+header {
+    position: relative;
+}
+
+#divider-header {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+#divider-header .divider-1 {
+    bottom: -17%;
+}
+
 #logo {
     width: 35%;
-    margin: 2% 0 0 2%;
+    margin: 2% 0 0 2%;    
 }
 
 /* Navigation */ 
@@ -314,11 +338,6 @@ footer ul,
 
 /* Main */
 
-
-main {
-
-}
- 
 #testimonials,
 #philosophy,
 #services,
@@ -335,7 +354,7 @@ main {
 }
 
 #testimonials .divider-1 {
-    top: -11.5%;
+    top: -12%;
 }
 
 .testimonial-container {
@@ -396,7 +415,7 @@ p.client-name {
     font-size: 2vw;
 }
 
-.divider-2 {
+#testimonials .divider-2 {
     bottom: -37%;
 }
 
@@ -465,7 +484,7 @@ p.client-name {
 
 #services {
     flex-flow: column;
-    padding: 2% 0 5%;
+    padding: 3% 0 5%;
     align-items: center;
     overflow-x: hidden;
     background-color: #EFEFE9;
@@ -645,11 +664,11 @@ footer ul {
 
 /* Internal Pages */
 
-/* Packages */
-
-.internal-page .divider-1 {
-    top: 27%;
+main {
+    position: relative;
 }
+
+/* Packages */
 
 .internal-page section {
     padding: 5%;
@@ -670,9 +689,7 @@ footer ul {
 }
 
 #get-started .container {
-    border: none;
-    width: 90%;
-    margin: 0 5%;
+    border: .08em solid transparent;
 }
 
 .internal-page div {
@@ -713,10 +730,6 @@ footer ul {
     color: #925c79
 }
 
-#get-started .container p {
-    font-size: 1.8vw;
-}
-
 #get-started .container ol {
     width: 80%;
     margin: 0 10% 2em;
@@ -734,7 +747,7 @@ footer ul {
 
 #get-started .container ul li {
         font-size: 1.7vw;
-    }
+}
 
 .internal-page .container div ul li {
     list-style-type: disc;
@@ -869,6 +882,127 @@ footer ul {
         margin: 2% 0 2% 2%;
     }
     
+/* Navigation */
+    
+    #navigation {
+        width: 50%;
+        margin: 0;
+    } 
+
+    #navigation ul {
+        width: 90%;
+        padding: 0 5%;
+        flex-flow: column;
+        justify-content: flex-end;
+        font-size: 3vw;
+    }
+
+    #navigation ul li {
+        padding: 0 2% 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .menu-toggle {
+        display: inline-block;
+        margin: 5% 5% 0 5%;
+        padding: 1% 1% 0;
+        line-height: 1em;
+        font-size: 6vw;
+        color: #432333;
+        float: right;
+        text-decoration: none;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        color: #97a0b0;
+    }  
+
+    .main-menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: visible;
+        transition: left 0.3s ease,
+                  box-shadow 0.3s ease;
+        z-index: 10;
+        background-color: #EFEFE9;
+    }
+
+    .main-menu ul {
+        display: block;
+        margin-top: 5em;
+        width: 100%;
+        min-height: 100vh;
+        background: transparent;
+    }
+    
+    .main-menu ul ul {
+        display: none;
+    }
+
+    .main-menu a {
+        display: block;
+        padding: 1em;
+        line-height: 1em;
+        color: #432333;
+        text-decoration: none;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        text-decoration: none;
+        color: #97a0b0;
+    }
+
+    .main-menu .menu-close {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 10vw;
+        padding: 0 .5em;
+    }
+
+    .main-menu:target {
+        left: 0%;
+        outline: none;
+        -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    }
+
+    .main-menu:target .menu-close {
+        z-index: 12;
+    }
+
+    .main-menu:target ul {
+        position: relative;
+        z-index: 11;
+    }
+
+    .main-menu:target + .backdrop {
+      position: absolute;
+      display: block;  
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 9;
+      background: rgba(0,0,0,0.5);
+      cursor: default;
+    }
+
+/* #navigation ul .sub-nav {
+    display: block;
+    padding: 0 0 10% 10%;
+} */    
+    
     
 /* Philosophy Section */
 
@@ -939,11 +1073,6 @@ footer ul {
     }
 
 /* Internal Pages */
-
-
-    .internal-page .divider-1 {
-        top: 19%;
-    }
  
     #packages .container div {
         flex: 1 0 49%;
@@ -954,10 +1083,6 @@ footer ul {
     }
   
     .internal-page .container p {
-        font-size: 2vw;
-    }
-
-    #get-started .container p {
         font-size: 2vw;
     }
     
@@ -976,203 +1101,262 @@ footer ul {
     #add-ons .container div ul li {
         padding: 1.5em 1em 0 0;
     }
+}
 
+
+/*** Up to 560px ***/
+@media only screen and (max-width: 35em) {
+    
+/* General Styles */
+    
+    h3 {
+        font-size: 12vw;
+    }
+    
+    h4 {
+        font-size: 4vw;
+    }
+    
+    h5 {
+        font-size: 6vw;
+    }
+
+    h6 {
+        font-size: 4.5vw;
+    }
+    
+    p {
+        font-size: 3.8vw;
+    }
+    
+    .padding-top-800 {
+        padding-top: 0% !important;
+    }
+    
+    .border-bottom:after {
+        bottom: -2em;
+    }
+
+    .border-bottom-800:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        position: absolute;
+        bottom: -3.5em;
+        border-bottom: .08em solid #432333;
+    }
+    
+/* Header */
+
+    #logo {
+        width: 80%;
+        margin: 9% 10% 10%;
+    }
+    
+    #divider-header .divider-1 {
+        bottom: -5%;
+    }
     
 /* Navigation */
     
     #navigation {
-        width: 50%;
+        width: 70%;
         margin: 0;
     } 
-
+    
     #navigation ul {
-        width: 90%;
-        padding: 3em 5% 0;
-        flex-flow: column;
-        justify-content: flex-end;
-        font-size: 1.4vw;
+        font-size: 5vw;
     }
-
-#navigation ul li {
-    padding: 0 2% 0 0;
-    font-size: .9em;
-    white-space: nowrap;
-    overflow: hidden;
-}
     
     .menu-toggle {
-        display: inline-block;
-        margin: 5% 5% 0 5%;
-        padding: 1% 1% 0;
-        line-height: 1em;
-        font-size: 3em;
-        color: #432333;
-        float: right;
-        text-decoration: none;
-    }
-
-    .menu-toggle:hover,
-    .menu-toggle:focus {
-        color: #97a0b0;
-    }  
-
-.main-menu {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: visible;
-    transition: left 0.3s ease,
-              box-shadow 0.3s ease;
-    z-index: 10;
-    background-color: #EFEFE9;
-}
-
-    .main-menu ul {
-        display: block;
-        margin-top: 5em;
-        width: 100%;
-        min-height: 100vh;
-        background: transparent;
-    }
-    
-    .main-menu ul ul {
-        display: none;
-    }
-
-    .main-menu a {
-        display: block;
-        padding: 1em;
-        line-height: 1em;
-        font-size: 2.5vw;
-        color: #432333;
-        text-decoration: none;
-    }
-
-    .main-menu a:hover,
-    .main-menu a:focus {
-        text-decoration: none;
-        color: #97a0b0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 15vw;
     }
 
     .main-menu .menu-close {
-        display: block;
         position: absolute;
         right: 0;
         top: 0;
-        font-size: 3em;
-        padding: .5em;
+        font-size: 15vw;
     }
 
-.main-menu:target {
-    left: 0%;
-    outline: none;
-    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
-    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
-    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+/* Services Section */
+
+.service-options ul {
+    flex-flow: column;
+    font-size: 3.8vw;
+    width: 100%;
+    margin: .5em 0 1em;
 }
 
-    .main-menu:target .menu-close {
-        z-index: 12;
-    }
-
-    .main-menu:target ul {
-        position: relative;
-        z-index: 11;
-    }
-
-    .main-menu:target + .backdrop {
-      position: absolute;
-      display: block;  
-      content: "";
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 9;
-      background: rgba(0,0,0,0.5);
-      cursor: default;
-    }
-
-/* #navigation ul .sub-nav {
-    display: block;
-    padding: 0 0 10% 10%;
-} */
-
+.service-options ul li:nth-child(1) {
+    flex: none;
+    width: 40%;
 }
 
-/*** Up to 720px ***/
-@media only screen and (max-width: 45em) {
+.service-options ul li:nth-child(2) {
+    flex: none;
+    width: 75%;
+}    
+
+/* Meet Kim Section */
+
+    .divider-5 {
+        top: -1.5%;
+    }
+
+    .kim {
+        width: 90%;
+        margin: 0 5%;
+        float: none;
+    }
+    
+/* Affiliates */
+
+    #affiliates img {
+        width: 50%;
+    }    
+    
+/* Footer */ 
+    
+    footer ul {
+        font-size: 3vw;
+        flex-flow: row;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        align-items: center;
+    }
+    
+    footer ul li {
+        padding: 1em 0 2em;
+        flex: 0 50%;
+    }
+
+    #policy p,
+    .tooltip {
+        font-size: 3vw;
+    }
+
+/* Internal Pages */
  
-    body {
-        font-size: 95%;
+    #packages .container div,
+    #taxes .container div,
+    #additional-services .container div {
+        flex: 1 0 100%;
+    }
+    
+    #packages .container .border:after,
+    #taxes .container .border:after,
+    #taxes .container .border,
+    #taxes .container .border-bottom:after,
+    #additional-services .border-bottom:after {
+       border: none;
+    }
+  
+    .internal-page .container p {
+        font-size: 3.8vw;
+    }
+    
+    #get-started .container ol li {
+        font-size: 3.8vw;
+    }
+    
+    #get-started .container ul li {
+        font-size: 3.6vw;
+    }
+    
+    #taxes .container div ul {
+        width: 50%;
+        margin-left: 30%;
+    }
+    
+    #add-ons .container div ul {
+        flex-flow: column;
+        width: 90%;
+        margin: 1em 5% 2em;
+        align-items: center;
+    }
+    
+    #add-ons .container ul li:nth-child(1) {
+        font-family: 'OpenSansBold', sans-serif;
+    }
+
+    #add-ons .container div ul li {
+        flex: 1;
+        border-bottom: none;
+        text-align: center;
+        padding: 0 !important;
+    }
+    
+    .internal-page .container div ul li {
+        font-size: 3.7vw;
     }   
-    
-
-}
-
-/*** Up to 640px ***/
-@media only screen and (max-width: 40em) {
-    
-    body {
-        font-size: 90%;
-    } 
-
-}
-
-/*** Up to 560px ***/
-@media only screen and (max-width: 35em) {
   
-    body {
-        font-size: 80%;
-    }  
-
-
-  
-}
-
-/*** Up to 480px ***/
-@media only screen and (max-width: 30em) {
-    
-    body {
-        font-size: 75%;
-    } 
-    
-
 }
 
 /*** Up to 400px ***/
 @media only screen and (max-width: 25em) {
 
-    body {
-        font-size: 70%;
-    }    
-}
-
-/*** Up to 336px ***/
-@media only screen and (max-width: 21em) {
-   
-    body {
-        font-size: 60%;
-    }  
-
+/* General Styles */
     
+    h3 {
+        font-size: 15vw;
+    }
+    
+    h4 {
+        font-size: 5vw;
+    }
+    
+    h5 {
+        font-size: 9vw;
+    }
+
+    h6 {
+        font-size: 6vw;
+    }
+    
+    p,
+    .service-options ul,
+    #packages .container p,
+    #packages .container ul li,
+    #taxes .container ul li,
+    #add-ons .container ul li,
+    #additional-services .container p,
+    #additional-services .container ul li,
+    #get-started .container p,
+    #get-started .container ol li {
+        font-size: 4.9vw;
+    }  
+    
+    .service-options ul li:nth-child(1) {
+        font-size: 7vw;
+        width: 90%;
+    }
+    
+    .service-options ul li:nth-child(2) {
+        width: 90%;
+    }
+    
+    .divider-footer {
+        top: -7%;
+    }
+    
+    footer ul {
+        font-size: 5vw;
+    }
+    
+    #policy p,
+    .tooltip {
+        font-size: 3.5vw;
+    }
+    
+    .tooltip .tooltiptext {
+        width: 100%;
+        padding: 5%;
+    }
+
 }
-
-/*** Up to 256px ***/
-@media only screen and (max-width: 16em) {
-
-    body {
-        font-size: 50%;
-    }   
-}
-
-/*** Up to 224px ***/
-@media only screen and (max-width: 14em) {
-
-    body {
-        font-size: 40%;
-    }    
-}
+  
