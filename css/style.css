@@ -312,7 +312,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: .4em;
+    top: .3em;
     background-color: #fffff9;
     min-width: 10em;
     overflow: scroll;
@@ -335,6 +335,9 @@ header {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+.mobile-only {
+    display: none;
+}
 
 /* Main */
 
@@ -421,6 +424,38 @@ p.client-name {
 
 /* Philosophy Section */
 
+/* AOS Slider */
+
+[data-aos][data-aos][data-aos-duration="800"],
+body[data-aos-duration="800"] [data-aos] {
+    transition-duration: .8s;
+}
+
+[data-aos][data-aos][data-aos-delay="0"],
+body[data-aos-delay="0"] [data-aos] {
+    transition-delay: 0;
+}
+
+[data-aos][data-aos][data-aos-delay="0"].aos-animate,
+body[data-aos-delay="0"] [data-aos].aos-animate {
+    transition-delay: 0s;
+}
+[data-aos][data-aos][data-aos-easing=ease-in-sine],body[data-aos-easing=ease-in-sine] [data-aos] {
+    transition-timing-function: cubic-bezier(.47,0,.745,.715);
+}
+
+[data-aos^=slide][data-aos^=slide] {
+    transition-property: transform;
+}
+
+[data-aos^=slide][data-aos^=slide].aos-animate {
+    transform: translateZ(0);
+}
+
+[data-aos=slide-left] {
+    transform: translate3d(120%,0,0);
+}
+
 #philosophy {
     flex-flow: column;
     padding: 9% 0 5%;
@@ -439,7 +474,7 @@ p.client-name {
 
 /* Basics Section */
 
-.divider-3 {
+#basics .divider-3 {
     top: -6.75%;
 }
 
@@ -534,15 +569,25 @@ p.client-name {
 
 /* Meet Kim Section */
 
-.divider-5 {
-    top: -4.5%;
-}
-
 #meet-kim {
     flex-flow: row;
     /* background-color: #EFEFE9; */
     background-color: #fffff9;
 }
+
+#meet-kim-divider {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 !important;
+}
+
+.divider-5 {
+    top: -4.5%;
+} 
 
 #meet-kim div {
     width: 90%;
@@ -633,6 +678,7 @@ footer ul {
     color: #fffff9;
     font-weight: 900;
     text-align: right;
+    cursor: pointer;
 }
 
 .tooltip .tooltiptext {
@@ -652,7 +698,8 @@ footer ul {
     overflow-y: scroll;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
     visibility: visible;
 }
 
@@ -686,10 +733,6 @@ main {
 
 .internal-page .container p {
     font-size: 1.6vw;
-}
-
-#get-started .container {
-    border: .08em solid transparent;
 }
 
 .internal-page div {
@@ -814,7 +857,7 @@ main {
 }
 
  .internal-page .divider-2 {
-    bottom: -43%;
+    bottom: -43.25%;
 }
 
 .internal-page #affiliates {
@@ -894,7 +937,7 @@ main {
         padding: 0 5%;
         flex-flow: column;
         justify-content: flex-end;
-        font-size: 3vw;
+        font-size: 2.25vw;
     }
 
     #navigation ul li {
@@ -935,14 +978,17 @@ main {
 
     .main-menu ul {
         display: block;
-        margin-top: 5em;
+        margin-top: 2em;
         width: 100%;
-        min-height: 100vh;
         background: transparent;
     }
     
     .main-menu ul ul {
-        display: none;
+        margin: 0;
+    } 
+    
+    .main-menu ul ul li {
+        font-size: 2vw;
     }
 
     .main-menu a {
@@ -995,14 +1041,16 @@ main {
       height: 100vh;
       z-index: 9;
       background: rgba(0,0,0,0.5);
-      cursor: default;
+      cursor: pointer;
     }
 
-/* #navigation ul .sub-nav {
-    display: block;
-    padding: 0 0 10% 10%;
-} */    
+    .dropdown div {
+        display: none;
+    }     
     
+    .mobile-only {
+        display: block;
+    }
     
 /* Philosophy Section */
 
@@ -1022,6 +1070,34 @@ main {
         margin: 2% 5%;
     }
     
+/* Basics Section */
+    
+    #basics .divider-3 {
+        top: -5%;
+    }
+    
+    #basics { 
+        position: relative; 
+        background-image: url(../images/intuitive-bookkeeper-basics-800.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        padding-top: 92.38%;
+    }
+    
+    #basics div {
+        top: 0;
+        right: 5%;
+    }
+    
+    #basics ul {
+        font-size: 2.13vw;
+    }
+
+    #basics .divider-4 {
+        bottom: -3.3%;
+    }
+    
 /* Services Section */
 
     #services {
@@ -1036,7 +1112,7 @@ main {
 
     .divider-5 {
         top: -3.5%;
-    }
+    } 
 
     #meet-kim div {
         margin: 4% 5% 5%;
@@ -1053,7 +1129,7 @@ main {
 /* Footer */ 
     
     .divider-footer {
-        top: -10%;
+        top: -11%;
     }
 
     footer ul {
@@ -1109,8 +1185,11 @@ main {
     
 /* General Styles */
     
-    h3 {
-        font-size: 12vw;
+    h3,
+    #meet-kim h3 {
+        font-size: 13vw;
+        margin: 0;
+        padding: 0;
     }
     
     h4 {
@@ -1166,14 +1245,14 @@ main {
     } 
     
     #navigation ul {
-        font-size: 5vw;
+        font-size: 4vw;
     }
     
     .menu-toggle {
         position: absolute;
         top: 0;
         right: 0;
-        font-size: 15vw;
+        font-size: 13vw;
     }
 
     .main-menu .menu-close {
@@ -1182,30 +1261,104 @@ main {
         top: 0;
         font-size: 15vw;
     }
+    
+    .main-menu ul ul li {
+        font-size: 3.5vw;
+    }
+    
+/* Testimonials Section */
+    
+    #testimonials {
+        background: url(../images/intuitive-bookkeeper-testimonials-560.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: contain;
+        padding-top: 93.16%; 
+    }
+
+    #testimonials .divider-1 {
+        top: -5%;
+    }
+    
+    .testimonial-container {
+        width: 80%;
+        top: 5%;
+        left: 10%;
+    }
+    
+    .testimonial-container p, p.client-name {
+        font-size: 4.6vw;
+    }
+
+    p.client-name {
+        font-size: 3.5vw;
+    }
+    
+    #testimonials .divider-2 {
+        bottom: -15%;
+    }    
+    
+/* AOS Slider */
+
+[data-aos][data-aos][data-aos-duration="800"],
+body[data-aos-duration="800"] [data-aos] {
+    transition-duration:.none;
+}
+
+[data-aos][data-aos][data-aos-delay="0"],
+body[data-aos-delay="0"] [data-aos] {
+    transition-delay: none;
+}
+
+[data-aos][data-aos][data-aos-delay="0"].aos-animate,
+body[data-aos-delay="0"] [data-aos].aos-animate {
+    transition-delay: none;
+}
+[data-aos][data-aos][data-aos-easing=ease-in-sine],body[data-aos-easing=ease-in-sine] [data-aos] {
+    transition-timing-function: none;
+}
+
+[data-aos^=slide][data-aos^=slide] {
+    transition-property: none;
+}
+
+[data-aos^=slide][data-aos^=slide].aos-animate {
+    transform: none;
+}
+
+[data-aos=slide-left] {
+    transform: none;
+}   
+    
+/* Basics Section */
+    
+    #basics h3 {
+        font-size: 11vw;
+    }
 
 /* Services Section */
 
-.service-options ul {
-    flex-flow: column;
-    font-size: 3.8vw;
-    width: 100%;
-    margin: .5em 0 1em;
-}
+    .service-options ul {
+        flex-flow: column;
+        font-size: 3.8vw;
+        width: 100%;
+        margin: .5em 0 1em;
+    }
 
-.service-options ul li:nth-child(1) {
-    flex: none;
-    width: 40%;
-}
+    .service-options ul li:nth-child(1) {
+        flex: none;
+        width: 60%;
+    }
 
-.service-options ul li:nth-child(2) {
-    flex: none;
-    width: 75%;
-}    
+    .service-options ul li:nth-child(2) {
+        flex: none;
+        width: 75%;
+    }    
 
 /* Meet Kim Section */
 
     .divider-5 {
-        top: -1.5%;
+        top: -1.3%;
     }
 
     .kim {
@@ -1221,9 +1374,16 @@ main {
     }    
     
 /* Footer */ 
+    footer {
+        padding: 0 0 10%;
+    }
+    
+    .divider-footer {
+        top: -6%;
+    }
     
     footer ul {
-        font-size: 3vw;
+        font-size: 4vw;
         flex-flow: row;
         flex-wrap: wrap-reverse;
         text-align: center;
@@ -1301,11 +1461,7 @@ main {
 @media only screen and (max-width: 25em) {
 
 /* General Styles */
-    
-    h3 {
-        font-size: 15vw;
-    }
-    
+        
     h4 {
         font-size: 5vw;
     }
@@ -1316,6 +1472,14 @@ main {
 
     h6 {
         font-size: 6vw;
+    }
+    
+    #navigation ul {
+        font-size: 5.5vw;
+    }
+    
+    .main-menu ul ul li {
+        font-size: 4.5vw;
     }
     
     p,
@@ -1331,6 +1495,14 @@ main {
         font-size: 4.9vw;
     }  
     
+    #basics .divider-4 {
+        bottom: -3.25%;
+    }
+    
+    #basics h3 {
+        font-size: 9vw;
+    }
+    
     .service-options ul li:nth-child(1) {
         font-size: 7vw;
         width: 90%;
@@ -1340,8 +1512,8 @@ main {
         width: 90%;
     }
     
-    .divider-footer {
-        top: -7%;
+    .divider-5 {
+        top: -1%;
     }
     
     footer ul {
