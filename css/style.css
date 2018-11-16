@@ -102,7 +102,10 @@ body {
 /* Headings */
 
 h1 {
-    
+    font-family: 'OpenSansLightItalic', sans-serif; 
+    font-size: 2vw;
+    color: #432333;
+    margin-left: 4%;
 }
 
 h2 {
@@ -879,6 +882,10 @@ main {
     
 /* General Styles */
     
+    h1 {
+        padding-bottom: 2%;
+    }
+    
     h3 {
         font-size: 7vw;
     }
@@ -948,13 +955,14 @@ main {
     
     .menu-toggle {
         display: inline-block;
-        margin: 5% 5% 0 5%;
-        padding: 1% 1% 0;
+        margin: 1% 5%;
         line-height: 1em;
-        font-size: 6vw;
+        font-size: 7vw;
         color: #432333;
-        float: right;
         text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .menu-toggle:hover,
@@ -1185,6 +1193,13 @@ main {
     
 /* General Styles */
     
+    h1 {
+        font-size: 5vw;
+        padding-bottom: 6%;
+        text-align: center;
+        margin-left: 0;
+    }
+    
     h3,
     #meet-kim h3 {
         font-size: 13vw;
@@ -1230,7 +1245,7 @@ main {
 
     #logo {
         width: 80%;
-        margin: 9% 10% 10%;
+        margin: 9% 10% 2%;
     }
     
     #divider-header .divider-1 {
@@ -1249,9 +1264,6 @@ main {
     }
     
     .menu-toggle {
-        position: absolute;
-        top: 0;
-        right: 0;
         font-size: 13vw;
     }
 
@@ -1282,12 +1294,12 @@ main {
     
     .testimonial-container {
         width: 80%;
-        top: 5%;
+        top: 10%;
         left: 10%;
     }
     
     .testimonial-container p, p.client-name {
-        font-size: 4.6vw;
+        font-size: 4.3vw;
     }
 
     p.client-name {
