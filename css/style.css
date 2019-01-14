@@ -106,10 +106,15 @@ h1 {
     font-size: 2vw;
     color: #432333;
     margin-left: 4%;
+    padding-top: 1em;
 }
 
 h2 {
-    
+    font-family: 'PlayfairDisplay', serif;
+    color: #432333;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 h3 {
@@ -194,6 +199,10 @@ ul li {
     border-right: .08em solid #432333;
 }
 
+.border-invisible {
+    border-right: .08em solid transparent;
+}
+
 .border-bottom:after {
     content: "";
     display: block;
@@ -220,7 +229,7 @@ nav ul,
 #services,
 #services .service-options,
 #services .service-options ul,
-#meet-kim,
+#about-us,
 footer,
 footer ul,
 #affiliates,
@@ -251,7 +260,7 @@ header {
 }
 
 #divider-header .divider-1 {
-    bottom: -17%;
+    bottom: -13%;
 }
 
 #logo {
@@ -347,7 +356,7 @@ header {
 #testimonials,
 #philosophy,
 #services,
-#meet-kim {
+#about-us {
     position: relative;
 }
 
@@ -478,24 +487,17 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* Basics Section */
 
 #basics .divider-3 {
-    top: -6.75%;
+    top: -5.5%;
 }
 
 #basics { 
     position: relative; 
     background-image: url(../images/intuitive-bookkeeper-basics.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    padding-top: 66.45%;
-}
-
-#basics div {
-    position: absolute;
-    top: 2%;
-    right: 40%;
-    bottom: 5%;
-    left: 5%;
+    padding: 3% 0 5%;
+    /* padding-top: 66.45%; */
 }
 
 #basics h3 {
@@ -505,9 +507,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 }
 
 #basics ul {
-    font-size: 1.4vw;
-    padding-top: 2%;
+    font-size: 1.8vw;
     color: #FAF9F4;
+    width: 60%;
+    margin: 0 0 0 5%;
 }
 
 #basics ul li {
@@ -515,7 +518,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 }
 
 #basics .divider-4 {
-    bottom: -4.5%;
+    bottom: -3.5%;
 }
 
 /* Services Section */
@@ -570,15 +573,15 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 .service-options a:active {color: #925c79;} 
 
 
-/* Meet Kim Section */
+/* About Us Section */
 
-#meet-kim {
+#about-us {
     flex-flow: row;
     /* background-color: #EFEFE9; */
     background-color: #fffff9;
 }
 
-#meet-kim-divider {
+#about-us-divider {
     position: absolute;
     width: 100%;
     top: 0;
@@ -589,15 +592,20 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 }
 
 .divider-5 {
-    top: -4.5%;
+    top: -3.25%;
 } 
 
-#meet-kim div {
+#about-us div {
     width: 90%;
     margin: 3% 5% 5%;
 }
 
-#meet-kim h3 {
+#about-us h3.about-us {
+    padding: 0 0 0 11%;
+    text-align: left;
+}
+
+#about-us h3 {
     padding: 0 0 0 12%;
 }
 
@@ -650,6 +658,11 @@ footer ul {
     justify-content: center;
 }
 
+footer a:link { color: #fffff9; text-decoration: none; }
+footer a:hover { color: #432333; text-decoration: none; }
+footer a:active { color: #432333; text-decoration: none; }
+footer a:visited { color: #fffff9; text-decoration: none; }
+
 #policy {
     flex: 1;
     width: 90%;
@@ -663,15 +676,6 @@ footer ul {
     margin: 0;
 }
 
-#policy p + p {
-    
-}
-
-#policy a:link { color: #fffff9; text-decoration: none; }
-#policy a:hover { color: #432333; text-decoration: none; }
-#policy a:active { color: #432333; text-decoration: none; }
-#policy a:visited { color: #fffff9; text-decoration: none; }
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -680,7 +684,6 @@ footer ul {
     font-size: 1.25vw;
     color: #fffff9;
     font-weight: 900;
-    text-align: right;
     cursor: pointer;
 }
 
@@ -760,10 +763,6 @@ main {
     color: #925c79;
 }
 
-#get-started .container div p {
-    color: #432333;
-}
-
 .internal-page .container a:link { color: #432333; }
 .internal-page .container a:visited { color: #432333; }
 .internal-page .container a:hover { color: #925c79; }
@@ -774,6 +773,202 @@ main {
     margin: 1em 5% 1em 10%;
     flex-flow: column;
     color: #925c79
+}
+
+.internal-page .container div ul li {
+    /* list-style-type: disc; */
+    padding: .5em 0;
+    font-size: 1.5vw;
+}
+
+.internal-testimonial p {
+    font-size: 1.5vw;
+}
+
+#packages .divider-7 {
+    top: -10%;
+}
+
+.grid-container {
+    display: grid;
+    padding: 5% 3%;
+    border: .08em solid #432333;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-container div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 4em 12em 6em 5em 4em 4em 4em 4em 4em 4em 4em;
+}
+
+.grid-container div img {
+    width: 80%;
+    margin: 0 10% 5%;
+}
+
+.grid-container div p {
+    font-size: 1.25vw;
+    margin-bottom: 0;
+  
+}
+
+.grid-container div span {
+    display: grid;
+    /* place-items: center; */
+    align-items: center;
+}
+
+.grid-container span:nth-child(2n+1) {
+    background-color: #efefe9;
+}
+
+#packages .internal-testimonial p {
+    width: 55%;
+    margin-left: 40%;
+    font-family: 'PlayfairDisplayItalic', serif; 
+    color: #efefe9;
+}
+
+#packages .internal-testimonial-background {
+    position: relative; 
+    background-image: url(../images/intuitive-bookkeeper-packages-testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0;
+    /* padding-top: 32.93%; */
+}
+
+#packages .divider-2 {
+    bottom: -33%;
+}
+
+#add-ons .divider-7 {
+    top: -23%;
+}
+
+#add-ons .internal-testimonial p {
+    width: 60%;
+    margin-right: 35%;
+    color: #925c79;
+}
+
+#add-ons .container div ul {
+    flex-flow: row;
+    width: 90%;
+    margin: 0 5%;
+    align-items: flex-end;
+}
+
+#add-ons .container div ul li {
+    flex: 2;
+    border-bottom: .04em solid #432333;
+    padding: 1em 1em 0 0;
+    list-style-type: none;
+}
+
+#add-ons .container div ul li + li {
+    flex: 1;
+}
+
+#add-ons .container p {
+    margin: 0 0 0 1em;
+}
+
+
+#add-ons .internal-testimonial-background {
+    position: relative; 
+    background-image: url(../images/intuitive-bookkeeper-addons-testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0;
+    /* padding-top: 32.93%; */
+}
+
+#add-ons .divider-2 {
+    bottom: -76.5%;
+}
+
+#taxes .divider-7 {
+    top: -14%;
+}
+
+#taxes .internal-testimonial p {
+    width: 60%;
+    margin-left: 35%;
+    font-family: 'PlayfairDisplayItalic', serif; 
+    color: #432333;
+}
+
+#taxes .container div ul {
+    width: 25%;
+    margin-left: 10%;
+}
+
+#taxes .internal-testimonial-background {
+    position: relative; 
+    background-image: url(../images/intuitive-bookkeeper-taxes-testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0;
+    /* padding-top: 32.93%; */
+}
+
+#taxes .divider-2 {
+    bottom: -46.5%;
+}
+
+#additional-services .divider-7 {
+    top: -15%;
+}
+
+#additional-services .internal-testimonial p {
+    width: 60%;
+    margin-right: 35%;
+    font-family: 'PlayfairDisplayItalic', serif; 
+    color: #432333;
+}
+
+#additional-services .internal-testimonial-background {
+    position: relative; 
+    background-image: url(../images/intuitive-bookkeeper-additional-services-testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0;
+    /* padding-top: 32.93%; */
+}
+
+#additional-services .divider-2 {
+    bottom: -50%;
+}
+
+#get-started .divider-7 {
+    top: -18.5%;
+}
+
+#get-started .internal-testimonial p {
+    width: 50%;
+    margin-left: 45%;
+    font-family: 'PlayfairDisplayItalic', serif; 
+    color: #E3D0D6;
+}
+
+#get-started .internal-testimonial-background {
+    position: relative; 
+    background-image: url(../images/intuitive-bookkeeper-get-started-testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0;
+    /* padding-top: 32.93%; */
+}
+
+#get-started .container div p {
+    color: #432333;
 }
 
 #get-started .container ol {
@@ -795,72 +990,8 @@ main {
         font-size: 1.7vw;
 }
 
-.internal-page .container div ul li {
-    list-style-type: disc;
-    padding: .5em 0;
-    font-size: 1.5vw;
-}
-
-#add-ons .container div ul {
-    flex-flow: row;
-    width: 90%;
-    margin: 0 5%;
-    align-items: flex-end;
-}
-
-#add-ons .container div ul li {
-    flex: 2;
-    border-bottom: .04em solid #432333;
-    padding: 1em 1em 0 0;
-    list-style-type: none;
-}
-
-#add-ons .container div ul li + li {
-    flex: 1;
-}
-
-#taxes .container div ul {
-    width: 25%;
-    margin-left: 10%;
-}
-
-.internal-page .divider-7 {
-    top: -13%;
-}
-
-.internal-page .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-internal-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    padding-top: 32.93%;
-}
-
-.internal-page .internal-testimonial {
-    position: absolute;
-    top: 12%;
-    width: 60%;
-    margin: 0 5% 0 35%;
-    font-family: 'PlayfairDisplayItalic', serif;    
-    color: #432333;
-}
-
-#packages .internal-testimonial p {
-    font-size: 1.25vw;
-}
-
-#get-started .internal-testimonial p {
-    font-size: 1.8vw;
-    margin-top: 5%;
-}
-
-#taxes .internal-testimonial p {
-    font-size: 1.5vw;
-}
-
- .internal-page .divider-2 {
-    bottom: -43.25%;
+#get-started .divider-2 {
+    bottom: -60.5%;
 }
 
 .internal-page #affiliates {
@@ -1116,17 +1247,17 @@ main {
         font-size: 2vw;
     }
 
-/* Meet Kim Section */
+/* About Us Section */
 
     .divider-5 {
         top: -3.5%;
     } 
 
-    #meet-kim div {
+    #about-us div {
         margin: 4% 5% 5%;
     }
-
-    #meet-kim h3 {
+    
+    #about-us h3 {
         padding: 2% 0 2% 13%;
     }
 
@@ -1201,7 +1332,7 @@ main {
     }
     
     h3,
-    #meet-kim h3 {
+    #about-us h3 {
         font-size: 13vw;
         margin: 0;
         padding: 0;
@@ -1367,7 +1498,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
         width: 75%;
     }    
 
-/* Meet Kim Section */
+/* About Us Section */
 
     .divider-5 {
         top: -1.3%;
