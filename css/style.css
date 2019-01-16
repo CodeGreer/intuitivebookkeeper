@@ -93,7 +93,6 @@ html {
 body {
     min-height: 100vh;
     height: 100%;
-    /* font-size: 100%; */
     color: #000;
     background-color: #fffff9;
     line-height: 1.625;
@@ -105,8 +104,8 @@ h1 {
     font-family: 'OpenSansLightItalic', sans-serif; 
     font-size: 2vw;
     color: #432333;
-    margin-left: 4%;
-    padding-top: 1em;
+    margin: 1em 0 0 4%;
+    line-height: 1em;
 }
 
 h2 {
@@ -126,7 +125,7 @@ h3 {
 
 h4 {
     font-family: 'PlayfairDisplay', serif;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     color: #fffff9;
 }
 
@@ -159,6 +158,10 @@ p {
 
 img {
     max-width: 100%;
+}
+
+ul li {
+    font-size: 1.8vw;
 }
 
 ul li {
@@ -250,17 +253,8 @@ header {
     position: relative;
 }
 
-#divider-header {
-    position: absolute;
-    top: 0%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -10;
-}
-
 #divider-header .divider-1 {
-    bottom: -13%;
+    bottom: -13.5%;
 }
 
 #logo {
@@ -280,11 +274,14 @@ header {
     flex-flow: row;
     justify-content: space-around;
     position: relative;
-    bottom: .25em;
+    bottom: .5em;
     font-family: 'OpenSansLight', sans-serif;
-    font-size: 1.4vw;
     color: #432333;
     z-index: 10;
+}
+
+#navigation ul li {
+    font-size: 1.4vw;
 }
 
 /* Menu */
@@ -418,7 +415,6 @@ header {
 
 .testimonial-container p, p.client-name {
     font-family: 'PlayfairDisplayItalic', serif;
-    font-size: 2.25vw;
     color: #432333;
     width: 100%;
     margin: 0;
@@ -427,11 +423,11 @@ header {
 p.client-name {
     font-family: 'PlayfairDisplay', serif;
     text-align: right;
-    font-size: 2vw;
+    font-size: 1.6vw;
 }
 
 #testimonials .divider-2 {
-    bottom: -37%;
+    bottom: -21%;
 }
 
 /* Philosophy Section */
@@ -470,24 +466,24 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 
 #philosophy {
     flex-flow: column;
-    padding: 9% 0 5%;
+    padding: 8% 0 5%;
     align-items: center;
     overflow-x: hidden;
 }
 
 #philosophy h3 {
-    padding: 2% 0 0 15%;
+    padding-left: 15%;
 }
 
 #philosophy div {
-    width: 60%;
-    margin: 0 5% 0 35%;
+    width: 70%;
+    margin: 0 5% 0 25%;
 }
 
 /* Basics Section */
 
 #basics .divider-3 {
-    top: -5.5%;
+    top: -5.4%;
 }
 
 #basics { 
@@ -497,7 +493,6 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     background-size: cover;
     width: 100%;
     padding: 3% 0 5%;
-    /* padding-top: 66.45%; */
 }
 
 #basics h3 {
@@ -507,7 +502,6 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 }
 
 #basics ul {
-    font-size: 1.8vw;
     color: #FAF9F4;
     width: 60%;
     margin: 0 0 0 5%;
@@ -517,17 +511,16 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     padding: .5em 0
 }
 
-#basics .divider-4 {
-    bottom: -3.5%;
-}
-
 /* Services Section */
+
+#services .divider-4 {
+    top: -8.4%;
+}
 
 #services {
     flex-flow: column;
-    padding: 3% 0 5%;
+    padding: 3% 0 0;
     align-items: center;
-    overflow-x: hidden;
     background-color: #EFEFE9;
 }
 
@@ -543,11 +536,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 }
 
 .service-options ul {
-    width: 90%;
-    margin: 0 5%;
+    width: 86%;
+    margin: 0 7%;
     flex-flow: row;
     align-items: center;
-    font-size: 1.8vw;
     color: #432333;
 }
 
@@ -577,27 +569,16 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 
 #about-us {
     flex-flow: row;
-    /* background-color: #EFEFE9; */
     background-color: #fffff9;
 }
 
-#about-us-divider {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 !important;
-}
-
-.divider-5 {
-    top: -3.25%;
+#about-us .divider-5 {
+    top: -3%;
 } 
 
 #about-us div {
-    width: 90%;
-    margin: 3% 5% 5%;
+    width: 80%;
+    margin: 3% 10% 5%;
 }
 
 #about-us h3.about-us {
@@ -613,6 +594,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     float: left;
     width: 40%;
     margin: 0 2% 0 0;
+    padding-bottom: 3em;
 }
 
 /* Affiliates */
@@ -652,10 +634,13 @@ footer ul {
     width: 90%;
     margin: 4% 5% 0;
     font-family: "OpenSansLightItalic", sans-serif;
-    font-size: 1.25vw;
     color: #fffff9;
     flex-flow: column;
     justify-content: center;
+}
+
+footer ul li {
+    font-size: 1.4vw;
 }
 
 footer a:link { color: #fffff9; text-decoration: none; }
@@ -771,6 +756,7 @@ main {
 .internal-page .container div ul {
     width: 85%;
     margin: 1em 5% 1em 10%;
+    padding: 1em 0;
     flex-flow: column;
     color: #925c79
 }
@@ -783,10 +769,6 @@ main {
 
 .internal-testimonial p {
     font-size: 1.5vw;
-}
-
-#packages .divider-7 {
-    top: -10%;
 }
 
 .grid-container {
@@ -810,17 +792,20 @@ main {
 .grid-container div p {
     font-size: 1.25vw;
     margin-bottom: 0;
-  
+    color: #925c79;
 }
 
 .grid-container div span {
     display: grid;
-    /* place-items: center; */
     align-items: center;
 }
 
 .grid-container span:nth-child(2n+1) {
     background-color: #efefe9;
+}
+
+#packages .divider-7 {
+    top: -10%;
 }
 
 #packages .internal-testimonial p {
@@ -845,13 +830,13 @@ main {
 }
 
 #add-ons .divider-7 {
-    top: -23%;
+    top: -13.5%;
 }
 
 #add-ons .internal-testimonial p {
     width: 60%;
     margin-right: 35%;
-    color: #925c79;
+    color: #e5e8ec;
 }
 
 #add-ons .container div ul {
@@ -888,16 +873,16 @@ main {
 }
 
 #add-ons .divider-2 {
-    bottom: -76.5%;
+    bottom: -43.2%;
 }
 
 #taxes .divider-7 {
-    top: -14%;
+    top: -11%;
 }
 
 #taxes .internal-testimonial p {
-    width: 60%;
-    margin-left: 35%;
+    width: 40%;
+    margin-left: 55%;
     font-family: 'PlayfairDisplayItalic', serif; 
     color: #432333;
 }
@@ -918,7 +903,7 @@ main {
 }
 
 #taxes .divider-2 {
-    bottom: -46.5%;
+    bottom: -35%;
 }
 
 #additional-services .divider-7 {
@@ -1014,29 +999,13 @@ main {
 /* General Styles */
     
     h1 {
-        padding-bottom: 2%;
-    }
-    
-    h3 {
-        font-size: 7vw;
+        margin: .5em 0 0 4%;
+        line-height: 1.625em;
+        padding-bottom: .75em;
     }
     
     h4 {
         font-size: 2vw;
-    }
-    
-    h5 {
-        font-size: 3.75vw;
-    }
-
-    h6 {
-        font-size: 3vw;
-    }
-    
-    p {
-        font-size: 2vw;
-        width: 90%;
-        margin: 0 5% 1em;
     }
     
     .padding-top-800 {
@@ -1075,13 +1044,13 @@ main {
         padding: 0 5%;
         flex-flow: column;
         justify-content: flex-end;
-        font-size: 2.25vw;
     }
 
     #navigation ul li {
         padding: 0 2% 0 0;
         white-space: nowrap;
         overflow: hidden;
+        font-size: 2vw;
     }
     
     .menu-toggle {
@@ -1125,10 +1094,6 @@ main {
     .main-menu ul ul {
         margin: 0;
     } 
-    
-    .main-menu ul ul li {
-        font-size: 2vw;
-    }
 
     .main-menu a {
         display: block;
@@ -1192,129 +1157,103 @@ main {
     }
     
 /* Philosophy Section */
-
-    #philosophy {
-        padding: 12% 0 5%;
-    }
-
-    #philosophy h3,
-    #services h3 {
-        width: 90%;
-        margin: 0 5%;
-        padding: 2% 0 0;
+    
+    #philosophy h3 {
+        padding-left: 0;
     }
 
     #philosophy div {
-        width: 90%;
-        margin: 2% 5%;
-    }
-    
-/* Basics Section */
-    
-    #basics .divider-3 {
-        top: -5%;
-    }
-    
-    #basics { 
-        position: relative; 
-        background-image: url(../images/intuitive-bookkeeper-basics-800.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-        padding-top: 92.38%;
-    }
-    
-    #basics div {
-        top: 0;
-        right: 5%;
-    }
-    
-    #basics ul {
-        font-size: 2.13vw;
-    }
-
-    #basics .divider-4 {
-        bottom: -3.3%;
-    }
-    
-/* Services Section */
-
-    #services {
-        padding: 3% 0 5%;
-    }
-
-    .service-options ul {
-        font-size: 2vw;
-    }
-
-/* About Us Section */
-
-    .divider-5 {
-        top: -3.5%;
-    } 
-
-    #about-us div {
-        margin: 4% 5% 5%;
-    }
-    
-    #about-us h3 {
-        padding: 2% 0 2% 13%;
-    }
-
-    .kim {
-        width: 50%;
-    }
+        width: 80%;
+        margin: 0 10%;
+    }   
     
 /* Footer */ 
     
-    .divider-footer {
-        top: -11%;
-    }
-
-    footer ul {
-        font-size: 1.75vw;
-    }
-    
     footer ul li {
         padding: .5em 0;
-    }
-
-    #policy p {
         font-size: 1.75vw;
     }
 
-    .tooltip {
+    #policy p, .tooltip {
         font-size: 1.75vw;
     }
 
 /* Internal Pages */
  
-    #packages .container div {
-        flex: 1 0 49%;
-    }
+    .internal-page section {
+        padding: 3% 0 0;
+    } 
     
-    #packages .container .border + .border {
-       border: none;
+    .grid-container,
+    #add-ons .container,
+    #taxes .container,
+    #additional-services .container,
+    #get-started .container {
+        width: 90%;
+        margin: 0 5%;
     }
   
-    .internal-page .container p {
-        font-size: 2vw;
-    }
-    
-    #get-started .container ol li {
-        font-size: 2vw;
-    }
-    
-    #get-started .container ul li {
-        font-size: 1.9vw;
-    }
-    
-    .internal-page .container div ul li {
-        font-size: 1.9vw;
+    .grid-container {
+        display: grid;
+        padding: 5% 0;
+        border: .08em solid #432333;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    #add-ons .container div ul li {
-        padding: 1.5em 1em 0 0;
+    .grid-container div p {
+        font-size: 1.6vw;
+    }
+    
+    .internal-testimonial p {
+        font-size: 1.8vw;
+    }
+    
+    .internal-page .container p,
+    .internal-page .container div ul li,
+    .internal-page .container div div ul li,
+    .internal-page .container div ul p,
+    .internal-page .container div ol ul li {
+        font-size: 1.8vw;
+    }
+    
+    #packages .divider-7 {
+        top: -7.5%;
+    }
+
+    #packages .divider-2 {
+        bottom: -24.5%;
+    }
+    
+    #add-ons .divider-7 {
+        top: -10%;
+    }
+
+    #add-ons .divider-2 {
+        bottom: -33%;
+    }
+ 
+    #taxes .divider-7 {
+        top: -8%;
+    }
+    
+    #taxes .divider-2 {
+        bottom: -27.5%;
+    }
+    
+    #additional-services .divider-7 {
+        top: -12%;
+    }
+    
+    #additional-services .divider-2 {
+        bottom: -41%;
+    }
+    
+    #get-started .divider-7 {
+        top: -15%;
+    }
+    
+    #get-started .divider-2 {
+        bottom: -49%;
     }
 }
 
@@ -1326,31 +1265,22 @@ main {
     
     h1 {
         font-size: 5vw;
-        padding-bottom: 6%;
         text-align: center;
-        margin-left: 0;
+        margin: .5em 0 1.25em 0;
     }
     
-    h3,
-    #about-us h3 {
-        font-size: 13vw;
+    h3, #philosophy h3, #basics h3, #services h3, #about-us h3.about-us, #about-us h3 {
+        font-size: 13vw; 
         margin: 0;
         padding: 0;
+        text-align: center;
     }
     
     h4 {
         font-size: 4vw;
     }
     
-    h5 {
-        font-size: 6vw;
-    }
-
-    h6 {
-        font-size: 4.5vw;
-    }
-    
-    p {
+    p, ul li {
         font-size: 3.8vw;
     }
     
@@ -1375,13 +1305,11 @@ main {
 /* Header */
 
     #logo {
-        width: 80%;
-        margin: 9% 10% 2%;
+        width: 70%;
+        margin: 9% 15% 2%;
     }
     
-    #divider-header .divider-1 {
-        bottom: -5%;
-    }
+  
     
 /* Navigation */
     
@@ -1390,8 +1318,8 @@ main {
         margin: 0;
     } 
     
-    #navigation ul {
-        font-size: 4vw;
+    #navigation ul li {
+        font-size: 3.5vw;
     }
     
     .menu-toggle {
@@ -1405,22 +1333,17 @@ main {
         font-size: 15vw;
     }
     
-    .main-menu ul ul li {
-        font-size: 3.5vw;
-    }
-    
 /* Testimonials Section */
     
     #testimonials {
         background: url(../images/intuitive-bookkeeper-testimonials-560.jpg);
-        background-repeat: no-repeat;
         width: 100%;
         background-size: contain;
-        padding-top: 93.16%; 
+        padding-top: 83.33%; 
     }
 
     #testimonials .divider-1 {
-        top: -5%;
+        top: -5.5%;
     }
     
     .testimonial-container {
@@ -1429,17 +1352,13 @@ main {
         left: 10%;
     }
     
-    .testimonial-container p, p.client-name {
-        font-size: 4.3vw;
-    }
-
     p.client-name {
-        font-size: 3.5vw;
+        font-size: 3.6vw;
     }
-    
+   
     #testimonials .divider-2 {
-        bottom: -15%;
-    }    
+        bottom: -17.25%;
+    }
     
 /* AOS Slider */
 
@@ -1473,40 +1392,69 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     transform: none;
 }   
     
+/* Philosophy Section */
+    
+    #philosophy {
+        padding: 14% 0 5%;
+    }
+    
+    #philosophy div {
+        width: 90%;
+        margin: 1em 5% 0;
+    }
+    
 /* Basics Section */
     
-    #basics h3 {
-        font-size: 11vw;
+    #basics .divider-3 {
+        top: -1.7%;
     }
-
+    
+    #basics ul {
+        width: 80%;
+        margin: 0 10%;
+    }
+    
+    #basics ul li {
+        padding: 1em 0
+    }
+    
 /* Services Section */
+    
+    #services .divider-4 {
+        top: -2%;
+    }
 
     .service-options ul {
         flex-flow: column;
-        font-size: 3.8vw;
-        width: 100%;
-        margin: .5em 0 1em;
+        width: 90%;
+        margin: .5em 5% 1em;
     }
 
     .service-options ul li:nth-child(1) {
         flex: none;
-        width: 60%;
+        width: 100%;
     }
 
     .service-options ul li:nth-child(2) {
         flex: none;
-        width: 75%;
+        width: 100%;
     }    
 
 /* About Us Section */
 
-    .divider-5 {
-        top: -1.3%;
+    #about-us .divider-5 {
+        top: -.95%;
+    }
+    
+    #about-us div {
+        width: 90%;
+        margin: 3% 5% 5%;
     }
 
     .kim {
         width: 90%;
         margin: 0 5%;
+        padding: 0;
         float: none;
     }
     
@@ -1528,7 +1476,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     footer ul {
         font-size: 4vw;
         flex-flow: row;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         text-align: center;
         align-items: center;
     }
@@ -1538,8 +1486,12 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
         flex: 0 50%;
     }
 
-    #policy p,
     .tooltip {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .tooltip .tooltiptext {
         font-size: 3vw;
     }
 
@@ -1560,15 +1512,15 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
   
     .internal-page .container p {
-        font-size: 3.8vw;
+       /*  font-size: 3.8vw; */
     }
     
     #get-started .container ol li {
-        font-size: 3.8vw;
+        /* font-size: 3.8vw; */
     }
     
     #get-started .container ul li {
-        font-size: 3.6vw;
+        /* font-size: 3.6vw; */
     }
     
     #taxes .container div ul {
@@ -1595,7 +1547,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
     
     .internal-page .container div ul li {
-        font-size: 3.7vw;
+        /* font-size: 3.7vw; */
     }   
   
 }
@@ -1604,74 +1556,8 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 @media only screen and (max-width: 25em) {
 
 /* General Styles */
-        
-    h4 {
-        font-size: 5vw;
-    }
     
-    h5 {
-        font-size: 9vw;
+    #navigation ul li {
+        font-size: 4vw;
     }
-
-    h6 {
-        font-size: 6vw;
-    }
-    
-    #navigation ul {
-        font-size: 5.5vw;
-    }
-    
-    .main-menu ul ul li {
-        font-size: 4.5vw;
-    }
-    
-    p,
-    .service-options ul,
-    #packages .container p,
-    #packages .container ul li,
-    #taxes .container ul li,
-    #add-ons .container ul li,
-    #additional-services .container p,
-    #additional-services .container ul li,
-    #get-started .container p,
-    #get-started .container ol li {
-        font-size: 4.9vw;
-    }  
-    
-    #basics .divider-4 {
-        bottom: -3.25%;
-    }
-    
-    #basics h3 {
-        font-size: 9vw;
-    }
-    
-    .service-options ul li:nth-child(1) {
-        font-size: 7vw;
-        width: 90%;
-    }
-    
-    .service-options ul li:nth-child(2) {
-        width: 90%;
-    }
-    
-    .divider-5 {
-        top: -1%;
-    }
-    
-    footer ul {
-        font-size: 5vw;
-    }
-    
-    #policy p,
-    .tooltip {
-        font-size: 3.5vw;
-    }
-    
-    .tooltip .tooltiptext {
-        width: 100%;
-        padding: 5%;
-    }
-
 }
-  
