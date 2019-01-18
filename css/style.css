@@ -182,6 +182,10 @@ ul li {
     z-index: 5;
 }
 
+.show-560 {
+    display: none;
+}
+
 .bold {
     font-weight: 900;
 }
@@ -601,18 +605,32 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* Affiliates */
 
 #affiliates {
-    width: 90%;
-    margin: 10% 5%;
+    width: 80%;
+    margin: 0 10%;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-#affiliates img {
+#affiliates div {
     width: 20%;
+    margin: 2%;
+    flex: 0 0 20%;
+    text-align: center;
 }
 
-#affiliates img:hover {
-    
+#affiliates div img {
+    opacity: .5;
+}
+
+#affiliates div a img:hover {
+    opacity: 1;
+}
+
+.disclosure {
+    font-family: 'OpenSansLight', sans-serif;
+    font-size: 1.25vw;
+    padding-bottom: 6em;
 }
 
 /* Footer */ 
@@ -700,14 +718,11 @@ footer a:visited { color: #fffff9; text-decoration: none; }
 }
 
 
-
 /* Internal Pages */
 
 main {
     position: relative;
 }
-
-/* Packages */
 
 .internal-page section {
     padding: 5% 5% 2.5%;
@@ -738,11 +753,6 @@ main {
     margin: 5% 0;
 }
 
-#taxes .container div,
-#additional-services .container div {
-    flex: 1 0 49%;
-}
-
 .internal-page .container div p {
     width: 90%;
     margin: 1em 5%;
@@ -767,6 +777,8 @@ main {
     padding: .5em 0;
     font-size: 1.5vw;
 }
+
+/* Packages */
 
 .grid-container {
     display: grid;
@@ -801,7 +813,7 @@ main {
     background-color: #efefe9;
 }
 
-
+/* Add-ons */
 
 #add-ons .container div ul {
     flex-flow: row;
@@ -825,10 +837,20 @@ main {
     margin: 0 0 0 1em;
 }
 
+
+/* Taxes */
+
+#taxes .container div,
+#additional-services .container div {
+    flex: 1 0 49%;
+}
+
 #taxes .container div ul {
     width: 25%;
     margin-left: 10%;
 }
+
+/* Get Started */
 
 #get-started .container div p {
     color: #432333;
@@ -855,11 +877,12 @@ main {
 
 
 .internal-testimonial-background {
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%; */
     margin-top: 1em;
     position: relative;
+}
+
+.internal-testimonial p {
+    font-size: 1.5vw;
 }
 
 .packages-testimonial {
@@ -916,13 +939,6 @@ main {
 
 .get-started-testimonial p {
     color: #E3D0D6;
-}
-
-#affiliates {
-    width: 90%;
-    margin: 5% 5% 10%;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -1144,7 +1160,7 @@ main {
     }
     
     .internal-testimonial p {
-        font-size: 1.8vw;
+        font-size: 1.7vw;
     }
     
     .internal-page .container p,
@@ -1153,46 +1169,6 @@ main {
     .internal-page .container div ul p,
     .internal-page .container div ol ul li {
         font-size: 1.8vw;
-    }
-    
-    #packages .divider-7 {
-        top: -7.5%;
-    }
-
-    #packages .divider-2 {
-        bottom: -24.5%;
-    }
-    
-    #add-ons .divider-7 {
-        top: -10%;
-    }
-
-    #add-ons .divider-2 {
-        bottom: -33%;
-    }
- 
-    #taxes .divider-7 {
-        top: -8%;
-    }
-    
-    #taxes .divider-2 {
-        bottom: -27.5%;
-    }
-    
-    /* #additional-services .divider-7 {
-        top: -12%;
-    }
-    
-     #additional-services .divider-2 {
-        bottom: -41%;
-    } */
-    
-    #get-started .divider-7 {
-        top: -15%;
-    }
-    
-    #get-started .divider-2 {
-        bottom: -49%;
     }
 }
 
@@ -1208,6 +1184,12 @@ main {
         margin: .5em 0 1.25em 0;
     }
     
+    h2 {
+        font-size: 4vw;
+        margin-bottom: 2em;
+    }
+
+    
     h3, #philosophy h3, #basics h3, #services h3, #about-us h3.about-us, #about-us h3 {
         font-size: 13vw; 
         margin: 0;
@@ -1216,7 +1198,15 @@ main {
     }
     
     h4 {
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+    
+    h5 {
+        font-size: 6vw;
+    }
+
+    h6 {
+        font-size: 5vw;
     }
     
     p, ul li {
@@ -1247,8 +1237,6 @@ main {
         width: 70%;
         margin: 9% 15% 2%;
     }
-    
-  
     
 /* Navigation */
     
@@ -1399,21 +1387,28 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     
 /* Affiliates */
 
-    #affiliates img {
-        width: 50%;
-    }    
-    
-/* Footer */ 
-    footer {
-        padding: 0 0 10%;
+    #affiliates {
+        width: 90%;
+        margin: 5% 5% 0;
+    }
+
+    #affiliates div {
+        margin: 2% 5%;
+        flex: 0 0 30%;
+    }
+
+    .disclosure {
+        font-size: 2.6vw;
+        padding-bottom: 3em;
     }
     
+/* Footer */ 
+    
     .divider-footer {
-        top: -6%;
+        top: -10%;
     }
     
     footer ul {
-        font-size: 4vw;
         flex-flow: row;
         flex-wrap: wrap;
         text-align: center;
@@ -1423,11 +1418,13 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     footer ul li {
         padding: 1em 0 2em;
         flex: 0 50%;
+        font-size: 3vw;
     }
 
     .tooltip {
         width: 90%;
         margin: 0 5%;
+        text-align: center;
     }
 
     .tooltip .tooltiptext {
@@ -1435,59 +1432,131 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
 /* Internal Pages */
+    
+    .internal-page .container {
+        border: 0;
+    }
+    
+    .internal-page .container div ul {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    .internal-page .container p,
+    .internal-page .container div ul li,
+    .internal-page .container div ul li p {
+        font-size: 3.8vw;
+    }
+    
+    .internal-page section > p:first-of-type {
+        width: 80%;
+        margin: 0 10%;
+    }
  
-    #packages .container div,
+    .grid-container {
+        padding: 0;
+        border: .0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-container div {
+        grid-template-rows: auto auto 4em 9em 5em 4em 4em 4em 4em 4em 4em 4em 4em;
+        margin-bottom: 5em;
+    }
+
+    .grid-container div img {
+        width: 90%;
+        margin: 0 5% 1em;
+    }
+
+    .grid-container div p {
+        font-size: 3.5vw;
+    }
+    
+    .border,
+    .border-bottom,
+    .border-bottom:after,
+    .border-bottom-800:after {
+        border: 0;
+    }
+    
+    #add-ons .container div ul {
+        flex-wrap: wrap;
+        border-bottom: .04em solid #432333;
+        width: 90%;
+        margin: 1em 5% 0;
+        align-items: none;
+}
+
+    #add-ons .container div ul li {
+        flex: 1 0 100%;
+        border-bottom: none;
+        padding: 0;
+    }
+    
+    #add-ons .container div ul li + li {
+        padding-top: 1em;
+        text-align: right;
+    }
+    
     #taxes .container div,
     #additional-services .container div {
         flex: 1 0 100%;
     }
     
-    #packages .container .border:after,
-    #taxes .container .border:after,
-    #taxes .container .border,
-    #taxes .container .border-bottom:after,
-    #additional-services .border-bottom:after {
-       border: none;
-    }
-  
-    .internal-page .container p {
-       /*  font-size: 3.8vw; */
-    }
-    
-    #get-started .container ol li {
-        /* font-size: 3.8vw; */
-    }
-    
-    #get-started .container ul li {
-        /* font-size: 3.6vw; */
-    }
-    
     #taxes .container div ul {
-        width: 50%;
-        margin-left: 30%;
-    }
-    
-    #add-ons .container div ul {
-        flex-flow: column;
-        width: 90%;
-        margin: 1em 5% 2em;
-        align-items: center;
-    }
-    
-    #add-ons .container ul li:nth-child(1) {
-        font-family: 'OpenSansBold', sans-serif;
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
 
-    #add-ons .container div ul li {
-        flex: 1;
-        border-bottom: none;
-        text-align: center;
-        padding: 0 !important;
+    #get-started .container ol {
+        width: 80%;
+        margin: 0 10% 2em;
+    }
+
+    #get-started .container ol li {
+        font-size: 3.8vw;
+    }
+
+    #get-started .container ul li {
+            font-size: 3.7vw;
     }
     
-    .internal-page .container div ul li {
-        /* font-size: 3.7vw; */
-    }   
+/* Testimonials */    
+    
+    .internal-testimonial-background {
+        margin: 1em 0 0 0;
+    }
+    
+    .show-560 {
+        display: block;
+    }
+    
+    .internal-testimonial-background img {
+        display: none;
+    }
+
+    .packages-testimonial,
+    .add-ons-testimonial,
+    .taxes-testimonial,
+    .additional-services-testimonial,
+    .get-started-testimonial {
+        position: relative;
+        width: 90%;
+        margin: 0 5% 2em;
+        top: 0;
+        left: 0;
+    }  
+    
+    .packages-testimonial p,
+    .add-ons-testimonial p,
+    .taxes-testimonial p,
+    .additional-services-testimonial p,
+    .get-started-testimonial p {
+        font-size: 3.5vw;
+        color: #925c79;
+    }
   
 }
 
