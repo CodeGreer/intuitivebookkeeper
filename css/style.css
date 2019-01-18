@@ -423,6 +423,7 @@ header {
 p.client-name {
     font-family: 'PlayfairDisplay', serif;
     text-align: right;
+    margin-right: 15%;
     font-size: 1.6vw;
 }
 
@@ -709,7 +710,7 @@ main {
 /* Packages */
 
 .internal-page section {
-    padding: 5%;
+    padding: 5% 5% 2.5%;
 }
 
 .internal-page h3 {
@@ -767,10 +768,6 @@ main {
     font-size: 1.5vw;
 }
 
-.internal-testimonial p {
-    font-size: 1.5vw;
-}
-
 .grid-container {
     display: grid;
     padding: 5% 3%;
@@ -804,40 +801,7 @@ main {
     background-color: #efefe9;
 }
 
-#packages .divider-7 {
-    top: -10%;
-}
 
-#packages .internal-testimonial p {
-    width: 55%;
-    margin-left: 40%;
-    font-family: 'PlayfairDisplayItalic', serif; 
-    color: #efefe9;
-}
-
-#packages .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-packages-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0;
-    /* padding-top: 32.93%; */
-}
-
-#packages .divider-2 {
-    bottom: -33%;
-}
-
-#add-ons .divider-7 {
-    top: -13.5%;
-}
-
-#add-ons .internal-testimonial p {
-    width: 60%;
-    margin-right: 35%;
-    color: #e5e8ec;
-}
 
 #add-ons .container div ul {
     flex-flow: row;
@@ -861,95 +825,9 @@ main {
     margin: 0 0 0 1em;
 }
 
-
-#add-ons .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-addons-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0;
-    /* padding-top: 32.93%; */
-}
-
-#add-ons .divider-2 {
-    bottom: -43.2%;
-}
-
-#taxes .divider-7 {
-    top: -11%;
-}
-
-#taxes .internal-testimonial p {
-    width: 40%;
-    margin-left: 55%;
-    font-family: 'PlayfairDisplayItalic', serif; 
-    color: #432333;
-}
-
 #taxes .container div ul {
     width: 25%;
     margin-left: 10%;
-}
-
-#taxes .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-taxes-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0;
-    /* padding-top: 32.93%; */
-}
-
-#taxes .divider-2 {
-    bottom: -35%;
-}
-
-#additional-services .divider-7 {
-    top: -15%;
-}
-
-#additional-services .internal-testimonial p {
-    width: 60%;
-    margin-right: 35%;
-    font-family: 'PlayfairDisplayItalic', serif; 
-    color: #432333;
-}
-
-#additional-services .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-additional-services-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0;
-    /* padding-top: 32.93%; */
-}
-
-#additional-services .divider-2 {
-    bottom: -50%;
-}
-
-#get-started .divider-7 {
-    top: -18.5%;
-}
-
-#get-started .internal-testimonial p {
-    width: 50%;
-    margin-left: 45%;
-    font-family: 'PlayfairDisplayItalic', serif; 
-    color: #E3D0D6;
-}
-
-#get-started .internal-testimonial-background {
-    position: relative; 
-    background-image: url(../images/intuitive-bookkeeper-get-started-testimonial.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0;
-    /* padding-top: 32.93%; */
 }
 
 #get-started .container div p {
@@ -975,13 +853,74 @@ main {
         font-size: 1.7vw;
 }
 
-#get-started .divider-2 {
-    bottom: -60.5%;
+
+.internal-testimonial-background {
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; */
+    margin-top: 1em;
+    position: relative;
 }
 
-.internal-page #affiliates {
+.packages-testimonial {
+    position: absolute;
+    width: 58%;
+    top: 18%;
+    left: 39%;
+}
+
+.packages-testimonial p {
+    color: #efefe9;
+}
+
+.add-ons-testimonial {
+    position: absolute;
+    width: 70%;
+    top: 15%;
+    left: 1%;
+}
+
+.add-ons-testimonial p {
+    color: #e5e8ec;
+}
+
+.taxes-testimonial {
+    position: absolute;
+    width: 60%;
+    top: 20%;
+    left: 37%;
+}
+
+.taxes-testimonial p {
+    color: #432333;
+}
+
+.additional-services-testimonial {
+    position: absolute;
+    width: 60%;
+    top: 15%; 
+    left: 1%;
+}
+
+.additional-services-testimonial p {
+    color: #432333;
+}
+
+.get-started-testimonial  {
+    position: absolute;
+    width: 50%;
+    top: 20%;
+    left: 47%;
+    color: #E3D0D6;
+}
+
+.get-started-testimonial p {
+    color: #E3D0D6;
+}
+
+#affiliates {
     width: 90%;
-    margin: 18% 5% 10%;
+    margin: 5% 5% 10%;
     justify-content: center;
     align-items: center;
 }
@@ -1240,13 +1179,13 @@ main {
         bottom: -27.5%;
     }
     
-    #additional-services .divider-7 {
+    /* #additional-services .divider-7 {
         top: -12%;
     }
     
-    #additional-services .divider-2 {
+     #additional-services .divider-2 {
         bottom: -41%;
-    }
+    } */
     
     #get-started .divider-7 {
         top: -15%;
