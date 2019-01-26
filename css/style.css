@@ -1273,7 +1273,7 @@ main {
     } 
     
     #navigation ul li {
-        font-size: 4vw;
+        font-size: 3.75vw;
         padding: .25em 0;
     }
     
@@ -1552,16 +1552,12 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     #get-started ol {
-        width: 80%;
-        margin: 0 10% 2em;
+        width: 75%;
+        margin: 0 5% 1em 20%;
     }
 
     #get-started ol li {
         font-size: 4vw;
-    }
-
-    #get-started .container ul li {
-            font-size: 3.9vw;
     }
     
 /* Testimonials */    
@@ -1607,7 +1603,6 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* General Styles */
     
     #navigation ul li {
-        font-size: 4.5vw;
         padding: .35em 0;
     }
 }
