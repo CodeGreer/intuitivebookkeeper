@@ -1211,8 +1211,9 @@ main {
     }
     
     h2 {
-        font-size: 5vw;
-        margin-bottom: 2em;
+        font-size: 5.5vw;
+        width: 80%;
+        margin: 0 10% 2em;
     }
 
     
@@ -1224,7 +1225,7 @@ main {
     }
     
     h4 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
     h5 {
@@ -1236,7 +1237,7 @@ main {
     }
     
     p, ul li {
-        font-size: 4.3vw;
+        font-size: 4.5vw;
     }
     
     .padding-top-800 {
@@ -1426,19 +1427,20 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
     
     .affiliates div {
-        flex: 0 0 33%;
+        flex: 0 0 50%;
+        padding: 1em 0;
     }
 
     .disclosure {
-        font-size: 2vw;
-        margin-bottom: 5em;
+        font-size: 4vw;
         text-align: left;
+        padding-bottom: 2em;
     }
     
 /* Footer */ 
     
     .divider-footer {
-        top: -9%;
+        top: -7%;
     }
     
     footer ul {
@@ -1448,12 +1450,12 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     
     footer ul li {
         padding: 1em 0 2em;
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .tooltip {
-        width: 90%;
-        margin: 0 5%;
+        width: 100%;
+        margin: 0;
         text-align: center;
     }
 
@@ -1473,9 +1475,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
     
     .internal-page .container p,
+    .internal-page .grid-container p,
     .internal-page .container div ul li,
     .internal-page .container div ul li p {
-        font-size: 4.3vw;
+        font-size: 4.5vw
     }
     
     .internal-page section > p:first-of-type {
@@ -1490,7 +1493,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .grid-container div {
-        grid-template-rows: auto auto 4em auto 6em 4em 4em 4em 4em 4em 4em 4em 4em;
+        grid-template-rows: auto auto 4em auto 7em 5em 5em 5em 5em 5em 5em 5em 5em;
         margin-bottom: 5em;
     }
     
@@ -1592,7 +1595,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     .taxes-testimonial p,
     .additional-services-testimonial p,
     .get-started-testimonial p {
-        font-size: 3.5vw;
+        font-size: 4.4vw;
         color: #925c79;
     }
   
