@@ -92,6 +92,8 @@ html {
 
 body {
     min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
     color: #000;
     background-color: #fffff9;
@@ -113,7 +115,8 @@ h2 {
     color: #432333;
     font-size: 2.5vw;
     text-align: center;
-    margin-bottom: 1em;
+    width: 90%;
+    margin: 0 5% 1em;
 }
 
 h3 {
@@ -239,7 +242,7 @@ nav ul,
 #about-us,
 footer,
 footer ul,
-#affiliates,
+.affiliates,
 .internal-page .container,
 .internal-page .container div,
 .internal-page .container div ul {
@@ -300,6 +303,7 @@ header {
     left: auto;
     top: auto;
     height: auto;
+    
 }
   
 .main-menu a {
@@ -328,7 +332,7 @@ header {
     top: .3em;
     background-color: #fffff9;
     min-width: 10em;
-    overflow: scroll;
+    overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 15;
 }
@@ -516,17 +520,18 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     padding: .5em 0
 }
 
-/* Services Section */
-
-#services .divider-4 {
-    top: -8.4%;
+#basics .divider-4 {
+    bottom: -3.5%;
 }
+
+/* Services Section */
 
 #services {
     flex-flow: column;
     padding: 3% 0 0;
     align-items: center;
     background-color: #EFEFE9;
+    overflow-x: hidden;
 }
 
 #services h3 {
@@ -564,10 +569,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     flex: 3;
 }
 
-.service-options a:link {color: #432333; text-decoration: none;} 
-.service-options a:visited {color: #432333;}  
-.service-options a:hover {color: #925c79; }  
-.service-options a:active {color: #925c79;} 
+.service-options a:link, .text-link:link {color: #432333; text-decoration: none;} 
+.service-options a:visited, .text-link:visited {color: #432333;}  
+.service-options a:hover, .text-link:hover {color: #925c79; }  
+.service-options a:active, .text-link:active {color: #925c79;} 
 
 
 /* About Us Section */
@@ -604,7 +609,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 
 /* Affiliates */
 
-#affiliates {
+.affiliates {
     width: 80%;
     margin: 0 10%;
     justify-content: center;
@@ -612,25 +617,29 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     flex-wrap: wrap;
 }
 
-#affiliates div {
-    width: 20%;
-    margin: 2%;
-    flex: 0 0 20%;
+.affiliates:last-of-type {
+    padding-top: 2%;
+}
+
+.affiliates div {
+    flex: 0 0 25%;
     text-align: center;
 }
 
-#affiliates div img {
+.affiliates div img {
     opacity: .5;
+    max-width: 55%;
 }
 
-#affiliates div a img:hover {
+.affiliates div a img:hover {
     opacity: 1;
 }
 
 .disclosure {
     font-family: 'OpenSansLight', sans-serif;
-    font-size: 1.25vw;
-    padding-bottom: 6em;
+    font-size: 1vw;
+    padding: 2% 0 6em;
+    text-align: center;
 }
 
 /* Footer */ 
@@ -790,7 +799,7 @@ main {
 .grid-container div {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 4em 12em 6em 5em 4em 4em 4em 4em 4em 4em 4em;
+    grid-template-rows: auto auto 4em 15em 8em 5em 4em 4em 4em 4em 4em 4em 4em;
 }
 
 .grid-container div img {
@@ -852,16 +861,25 @@ main {
 
 /* Get Started */
 
+#get-started .container div {
+    margin-top: 0;
+}
+
+#get-started .container div iframe {
+    height: 100%;
+}
+
 #get-started .container div p {
     color: #432333;
 }
 
-#get-started .container ol {
+#get-started ol {
     width: 80%;
     margin: 0 10% 2em;
+    list-style-type: disc;
 }
 
-#get-started .container ol li {
+#get-started ol li {
     padding: .5em 0;
     font-size: 1.8vw;
 }
@@ -996,16 +1014,20 @@ main {
 
     #navigation ul {
         width: 90%;
-        padding: 0 5%;
+        padding: 3em 5% 0;
         flex-flow: column;
         justify-content: flex-end;
+    }
+    
+    #navigation ul:nth-child(1) {
+        padding-top: 0;
     }
 
     #navigation ul li {
         padding: 0 2% 0 0;
         white-space: nowrap;
         overflow: hidden;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     
     .menu-toggle {
@@ -1031,8 +1053,8 @@ main {
         left: -100%;
         width: 50%;
         height: 100vh;
+        overflow-x: hidden;
         overflow-y: scroll;
-        overflow-x: visible;
         transition: left 0.3s ease,
                   box-shadow 0.3s ease;
         z-index: 10;
@@ -1120,17 +1142,21 @@ main {
     #philosophy div {
         width: 80%;
         margin: 0 10%;
-    }   
+    }  
+    
+    .disclosure {
+        font-size: 1.25vw;
+    }
     
 /* Footer */ 
     
     footer ul li {
-        padding: .5em 0;
+        padding: 0 0 2em;
         font-size: 1.75vw;
     }
 
     #policy p, .tooltip {
-        font-size: 1.75vw;
+        font-size: 1.4vw;
     }
 
 /* Internal Pages */
@@ -1185,7 +1211,7 @@ main {
     }
     
     h2 {
-        font-size: 4vw;
+        font-size: 5vw;
         margin-bottom: 2em;
     }
 
@@ -1202,15 +1228,15 @@ main {
     }
     
     h5 {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
     h6 {
-        font-size: 5vw;
+        font-size: 6vw;
     }
     
     p, ul li {
-        font-size: 3.8vw;
+        font-size: 4.3vw;
     }
     
     .padding-top-800 {
@@ -1246,7 +1272,8 @@ main {
     } 
     
     #navigation ul li {
-        font-size: 3.5vw;
+        font-size: 4vw;
+        padding: .25em 0;
     }
     
     .menu-toggle {
@@ -1266,7 +1293,7 @@ main {
         background: url(../images/intuitive-bookkeeper-testimonials-560.jpg);
         width: 100%;
         background-size: contain;
-        padding-top: 83.33%; 
+        padding-top: 82.25%; 
     }
 
     #testimonials .divider-1 {
@@ -1274,13 +1301,18 @@ main {
     }
     
     .testimonial-container {
-        width: 80%;
-        top: 10%;
+        width: 75%;
+        top: 7%;
         left: 10%;
+    }
+    
+    .testimonial-container p {
+        font-size: 4vw;
     }
     
     p.client-name {
         font-size: 3.6vw;
+        text-align: left;
     }
    
     #testimonials .divider-2 {
@@ -1333,7 +1365,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* Basics Section */
     
     #basics .divider-3 {
-        top: -1.7%;
+        top: -1.5%;
     }
     
     #basics ul {
@@ -1345,11 +1377,11 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
         padding: 1em 0
     }
     
-/* Services Section */
-    
-    #services .divider-4 {
-        top: -2%;
+    #basics .divider-4 {
+        bottom: -1%;
     }
+    
+/* Services Section */
 
     .service-options ul {
         flex-flow: column;
@@ -1360,6 +1392,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     .service-options ul li:nth-child(1) {
         flex: none;
         width: 100%;
+        font-size: 6vw;
     }
 
     .service-options ul li:nth-child(2) {
@@ -1370,7 +1403,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* About Us Section */
 
     #about-us .divider-5 {
-        top: -.95%;
+        top: -.8%;
     }
     
     #about-us div {
@@ -1387,38 +1420,35 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     
 /* Affiliates */
 
-    #affiliates {
+    .affiliates {
         width: 90%;
         margin: 5% 5% 0;
     }
-
-    #affiliates div {
-        margin: 2% 5%;
-        flex: 0 0 30%;
+    
+    .affiliates div {
+        flex: 0 0 33%;
     }
 
     .disclosure {
-        font-size: 2.6vw;
-        padding-bottom: 3em;
+        font-size: 2vw;
+        margin-bottom: 5em;
+        text-align: left;
     }
     
 /* Footer */ 
     
     .divider-footer {
-        top: -10%;
+        top: -9%;
     }
     
     footer ul {
-        flex-flow: row;
-        flex-wrap: wrap;
         text-align: center;
         align-items: center;
     }
     
     footer ul li {
         padding: 1em 0 2em;
-        flex: 0 50%;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .tooltip {
@@ -1428,7 +1458,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .tooltip .tooltiptext {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
 /* Internal Pages */
@@ -1445,7 +1475,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     .internal-page .container p,
     .internal-page .container div ul li,
     .internal-page .container div ul li p {
-        font-size: 3.8vw;
+        font-size: 4.3vw;
     }
     
     .internal-page section > p:first-of-type {
@@ -1460,8 +1490,12 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .grid-container div {
-        grid-template-rows: auto auto 4em 9em 5em 4em 4em 4em 4em 4em 4em 4em 4em;
+        grid-template-rows: auto auto 4em auto 6em 4em 4em 4em 4em 4em 4em 4em 4em;
         margin-bottom: 5em;
+    }
+    
+    .grid-container div p:nth-child(4) {
+        padding-bottom: 1em;
     }
 
     .grid-container div img {
@@ -1470,7 +1504,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .grid-container div p {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
     
     .border,
@@ -1499,6 +1533,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
         text-align: right;
     }
     
+    #taxes section {
+        margin-bottom: 2em;
+    }
+    
     #taxes .container div,
     #additional-services .container div {
         flex: 1 0 100%;
@@ -1510,17 +1548,17 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
         text-align: center;
     }
 
-    #get-started .container ol {
+    #get-started ol {
         width: 80%;
         margin: 0 10% 2em;
     }
 
-    #get-started .container ol li {
-        font-size: 3.8vw;
+    #get-started ol li {
+        font-size: 4vw;
     }
 
     #get-started .container ul li {
-            font-size: 3.7vw;
+            font-size: 3.9vw;
     }
     
 /* Testimonials */    
@@ -1566,6 +1604,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* General Styles */
     
     #navigation ul li {
-        font-size: 4vw;
+        font-size: 4.5vw;
+        padding: .35em 0;
     }
 }
