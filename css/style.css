@@ -1019,7 +1019,7 @@ main {
 
     #navigation ul {
         width: 90%;
-        padding: 3em 5% 0;
+        padding: 0 5%;
         flex-flow: column;
         justify-content: flex-end;
     }
@@ -1282,7 +1282,7 @@ main {
     } 
     
     #navigation ul li {
-        font-size: 4.5vw;
+        font-size: 5vw;
         padding: .25em 0;
     }
     
