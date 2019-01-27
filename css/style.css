@@ -816,6 +816,11 @@ main {
 .grid-container div span {
     display: grid;
     align-items: center;
+    font-size: 1.23vw;
+    color: #925c79;
+    width: 90%;
+    margin: 0 0 1em;
+    padding: 0 5%;
 }
 
 .grid-container span:nth-child(2n+1) {
@@ -1185,6 +1190,10 @@ main {
         font-size: 1.6vw;
     }
     
+    .grid-container div span {
+        font-size: 1.6vw;
+    }
+    
     .internal-testimonial p {
         font-size: 1.7vw;
     }
@@ -1507,7 +1516,11 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .grid-container div p {
-        font-size: 4vw;
+        font-size: 4.5vw;
+    }
+    
+    .grid-container div span {
+        font-size: 4.5vw;
     }
     
     .border,
