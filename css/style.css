@@ -652,9 +652,10 @@ footer {
 
 .divider-footer {
     position: absolute;
-    top: -20%;
+    top: -16%;
     right: 0;
     left: 0;
+    width: 100%;
     z-index: 5;
 }
 
@@ -724,6 +725,10 @@ footer a:visited { color: #fffff9; text-decoration: none; }
 
 .contact-us:hover {
     text-decoration: underline !important;
+}
+
+.developer {
+    margin: 0 5% 2em;
 }
 
 
@@ -1449,7 +1454,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 /* Footer */ 
     
     .divider-footer {
-        top: -7%;
+        top: -5%;
     }
     
     footer ul {
