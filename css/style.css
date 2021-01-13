@@ -813,7 +813,7 @@ main {
 .grid-container div {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 4em 15em 8em 5em 4em 4em 4em 4em 4em 4em 4em;
+    grid-template-rows: auto auto 12em 8em 5em 4em 4em 4em 4em 4em 4em;
 }
 
 .grid-container div img {
@@ -874,7 +874,7 @@ main {
 }
 
 #taxes .container div ul {
-    width: 25%;
+    width: 40%;
     margin-left: 10%;
 }
 
@@ -1170,7 +1170,7 @@ main {
 /* Footer */ 
     
     .divider-footer {
-        top: -15%;
+        top: -14%;
     }
 
     
@@ -1227,6 +1227,10 @@ main {
     .internal-page .container div ul p,
     .internal-page .container div ol ul li {
         font-size: 1.8vw;
+    }
+    
+    #taxes .container div ul {
+        width: 50%;
     }
 }
 
@@ -1531,7 +1535,7 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
     }
 
     .grid-container div {
-        grid-template-rows: auto auto 4em auto 7em 5em 5em 5em 5em 5em 5em 5em 5em;
+        grid-template-rows: auto auto auto 7em 5em 5em 5em 5em 5em 5em 5em;
         margin-bottom: 5em;
     }
     
@@ -1600,6 +1604,10 @@ body[data-aos-delay="0"] [data-aos].aos-animate {
 
     #get-started ol li {
         font-size: 4vw;
+    }
+
+    #get-started .container div {
+        margin-top: -5em;
     }
     
 /* Testimonials */    
